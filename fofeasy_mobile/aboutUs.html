@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>关于我们</title>
+		<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" />
+    	<script src="js/jquery.min.js" type="text/javascript"></script>
+    	<script src="js/public.js" type="text/javascript"></script>
+    	<link rel="stylesheet" href="css/mui.min.css">
+    	<link rel="stylesheet" href="css/public.css" />
+		<style type="text/css">
+			.product_img{
+				height:200px;
+				background: url('img/companynew_01@3x.png') center center no-repeat;
+				background-size: cover;
+				width: auto;
+			}
+		</style>
+	</head>
+	<body class="container-fluid">
+		<header class = "load_header"></header>
+		<div class="row">
+			<!--第一部分，背景-->
+			<div class="product_img" >
+				
+			</div>
+			<!--第二部分，公司大事件-->
+			<div class="maincon about-con2" style="height: 210px;">
+				<div class="title">
+					公司大事件
+				</div>
+				<div class="card" style="background: url('img/companynew_04-04.png') center center no-repeat;">
+					
+				</div>
+			</div>
+			<!--第三部分，团队介绍-->
+			<div class="maincon about-con3">
+				<div class="title">
+					团队建设
+				</div>
+				<div class="" style="height: 400px;">
+					
+				</div>
+			</div>
+			<!--第四部分，公司动态-->
+			<div class="maincon about-con4" >
+				<div class="title">
+					公司动态
+				</div>
+				<!--图片轮播-->
+				<div id="slider" class="mui-slider " >
+					<div class="mui-slider-group mui-slider-loop" >
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate"  >
+							<a href="#">
+								<img src="img/easy@2x.png"  style="border-radius: 5px;">
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="img/headerBg2.png" >
+							</a>
+						</div>
+						<!-- 第三张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="img/mutual-con2-pic1.png" >
+							</a>
+						</div>
+						<!-- 第四张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="img/easy@2x.png" >
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="img/headerBg2.png" >
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+				<div class=" div" >
+					<div class="mui-table-view" >
+						<img class="mui-media-object mui-pull-left" src="img/003.png">
+						<div class="mui-media-body">
+							<div> 第二届“云+FOF”生态圈共建峰会 </div>
+							<div class='mui-ellipsis-2'>
+								2017年9月21日第二届云+FOF生态圈共建峰会“大数据时代的资产配置”在上海外国语大学顺利落下帷幕。本次峰会由私募云通、腾讯云主办，得到了长江众创
+							</div>
+							<div>2017-9-21</div>
+						</div>
+					</div>
+					<div class="mui-table-view" >
+						<img class="mui-media-object mui-pull-left" src="img/003.png">
+						<div class="mui-media-body">
+							<div> 第二届“云+FOF”生态圈共建峰会 </div>
+							<div class='mui-ellipsis-2'>
+								2017年9月21日第二届云+FOF生态圈共建峰会“大数据时代的资产配置”在上海外国语大学顺利落下帷幕。本次峰会由私募云通、腾讯云主办，得到了长江众创
+							</div>
+							<div>2017-9-21</div>
+						</div>
+					</div>
+					<div class="mui-table-view" >
+						<img class="mui-media-object mui-pull-left" src="img/003.png">
+						<div class="mui-media-body">
+							<div> 第二届“云+FOF”生态圈共建峰会 </div>
+							<div class='mui-ellipsis-2'>
+								2017年9月21日第二届云+FOF生态圈共建峰会“大数据时代的资产配置”在上海外国语大学顺利落下帷幕。本次峰会由私募云通、腾讯云主办，得到了长江众创
+							</div>
+							<div>2017-9-21</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<footer class="load_footer"></footer>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+		setTimeout(function(){
+			var slider = mui("#slider");
+			slider.slider({
+				interval:1000
+			})
+		})
+    </script>
+</html>

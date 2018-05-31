@@ -71,19 +71,25 @@ body a,body a:active,body a:hover,body a:link,body a:visited{
 .sy-header .core_data{
 	height: 50px;
 	width: 100%;
-	border-bottom: 1px solid #636262;
+	border-bottom: 1px solid #787777;
 	color: white;
 	font-size: 14px;
 	line-height: 50px;
-	text-indent: 2rem;
+	/*text-indent: 2rem;*/
 	margin-bottom:0px;
 	text-align: left;
+}
+.sy-header ul {
+	margin-bottom: 0;
 }
 .sy-header .li{
 	background: #636262;
 }
 .sy-header a{
+	width: 100%;
 	color: white;
+	float: left;
+    margin-left: 15px;
 }
 .sy-header a:hover{
 	text-decoration: none;
@@ -96,7 +102,7 @@ body a,body a:active,body a:hover,body a:link,body a:visited{
 .sy-header .cover{
 	position: absolute;
 	left: 0;
-	top:64px;
+	top:52px;
 	width: 100%;
 	background: #fff;
 	z-index: 998;
@@ -107,9 +113,9 @@ body a,body a:active,body a:hover,body a:link,body a:visited{
 }
 .sy-header .head{
 	background: #1E3149;
-	height: 64px;
+	height: 52px;
 	color:white;
-	line-height: 64px;
+	line-height: 52px;
 	font-size: 16px;
 	text-align: left;
 }

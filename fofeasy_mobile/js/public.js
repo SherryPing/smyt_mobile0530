@@ -32,10 +32,7 @@ $(function(){
 	$(".load_footer").load("./foot.html");
 	loadFundData();
 })
-window.onload=function(){
-	var cover_height=$("body").innerHeight()-64;		//获取当前屏幕的高度
-	$(".cover").height(cover_height+"px");		//设置遮罩层的高度   		
-}
+
 
 
 function loadFundData(){
@@ -110,4 +107,12 @@ function loadFundData(){
             }
         }
     });
+}
+
+window.onload=function(){
+	var cover_height=$("body").innerHeight()-52;		//获取当前屏幕的高度
+	if(cover_height>750){
+		$(".cover").height(cover_height+"px");		//设置遮罩层的高度   		
+	}		
+}	
 }

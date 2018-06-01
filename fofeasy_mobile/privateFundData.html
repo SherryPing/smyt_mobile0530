@@ -26,7 +26,7 @@
 			<!--头部背景-->
 			<div class="product_img" >
 				<div class="masthead">
-					<div class="bg-content" style="margin-top:25px ;">
+					<div class="bg-content" >
 						<div class="title" style="font-size: 16px;text-align: center;">中国私募证券投资基金数据库</div>
 						<div style="margin: 0 auto;width: 100px;">
 							<p class="s-btn lightblue">申请试用<img src="img/arrow-r-g.png" /></p>
@@ -46,22 +46,26 @@
 			<!--主体2-->
 			<div class="maincon private-con easy-con2" >
 				<div class="card-con">
-					<p class="dateEnd">——  截止：2018 - 4 - 17 —— </p> 
+					<div class="dateEnd" >
+						<hr class="date-hr" style="margin-right: 5px;"/>
+						<span >截止：<span id="hedge-date">2018 - 4 - 17</span> </span>
+						<hr class="date-hr" style="margin-left: 5px;"/>
+					</div> 
 					<div>
 						<div class="card">
-							<div class="title">173604</div>
+							<div class="title" id="hedge-product">--</div>
 							<div class="con">
 								<img src="img/pri-data.png"/><span>公募产品</span>
 							</div>
 						</div>
 						<div class="card">
-							<div class="title">34066</div>
+							<div class="title" id="hedge-company">--</div>
 							<div class="con">
 								<img src="img/pri-data.png"/>基金公司
 							</div>
 						</div>
 						<div class="card">
-							<div class="title">6025</div>
+							<div class="title" id="hedge-manager">--</div>
 							<div class="con">
 								<img src="img/pri-data.png"/>基金经理
 							</div>

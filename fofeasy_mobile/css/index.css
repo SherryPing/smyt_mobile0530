@@ -787,3 +787,81 @@ margin-bottom:10px ;
 .mui-ellipsis-2 {
 	-webkit-line-clamp: 3;
 }
+/*各页头部背景图片高度*/
+.product_img {
+	height: 200px !important;
+}
+/*首页*/
+.index .bgc {
+	background: #F3F7FA;
+}
+.index .con1 {
+	padding: 45px 0 45px 0;
+	font-size: 12px;
+}
+.index .con1  .title2 {
+	margin-bottom: 15px;
+}
+.index .con1  .title1>img {
+	width: 98px;
+	height: 20px;
+}
+.index .con1  .title2>img {
+	width: 137px;
+	height: 14px;
+}
+.index .con1 .introContent {
+	text-align: left;
+}
+.index .con2 {
+	padding: 0 2%;
+	border-bottom: 10px solid #F3F7FA;
+}
+.index .con2 .card {
+	font-size: 14px;
+	text-align: left;
+	padding: 0;
+}
+.index .con2 .card .title {
+	height: 45px;
+	line-height: 45px;
+	color: #3A495C;
+	border-bottom: 2px solid #F3F7FA;
+}
+.index .con2 .card .title img {
+	width: 45px;
+	height: 45px;
+	margin-left:20px;
+}
+.index .con2 .card .con {
+	padding: 0 25px;
+}
+.index .con2 .card .con>div {
+	margin: 20px 0;
+	color: #252525;
+}
+.index .con2 .card .con>div a {
+	width: 100%;
+}
+.index .con2 .card .con>div a:active {
+	text-decoration: underline;
+}
+.index .con2 .card .con>div p {
+	margin: 0;
+}
+.index .con2 .card .con>div .detail{
+	height: 25px;
+	line-height: 25px;
+	color: rgba(37,37,37,0.6);
+}
+.index .con3 {
+	padding: 10px 20px 0px 20px;
+}
+.index .con3 .title {
+	font-size: 20px;
+	color: #3A495C;
+}
+.index .con3 .contenttxt {
+	text-align: left;
+	font-size: 12px;
+}

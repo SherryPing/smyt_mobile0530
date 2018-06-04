@@ -30,6 +30,32 @@ $(function(){
 		
 	});
 	$(".load_footer").load("./foot.html");
+	//	跳转申请试用页面
+	$("div[data-id='apply-btn']").click(function(){
+		window.location.href="applyFor.html";
+	})
+	//	关于我们图片滚动
+	var arr=[1,2,3,0];
+	$(".about-con3 .btn-right").click(function(){		
+		arr.unshift(arr.pop());
+		var divs=$(".about-con3 .page-content .bg>div");
+		for(var i=0;i<divs.length;i++){
+			var ind="item-index"+arr[i];
+			divs.eq(i).removeClass();
+			divs.eq(i).addClass("item");
+			divs.eq(i).addClass(ind);
+		}
+	})
+	$(".about-con3 .btn-left").click(function(){		
+		arr.push(arr.shift());
+		var divs=$(".about-con3 .page-content .bg>div");
+		for(var i=0;i<divs.length;i++){
+			var ind="item-index"+arr[i];
+			divs.eq(i).removeClass();
+			divs.eq(i).addClass("item");
+			divs.eq(i).addClass(ind);
+		}
+	})
 	loadFundData();
 })
 

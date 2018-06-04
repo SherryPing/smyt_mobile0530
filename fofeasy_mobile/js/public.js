@@ -44,9 +44,14 @@ $(function(){
 			divs.eq(i).removeClass();
 			divs.eq(i).addClass("item");
 			divs.eq(i).addClass(ind);
+			if(arr[i]=="1"){
+				divs.eq(i).data('id','btn-left')
+			}
 		}
 	})
-	$(".about-con3 .btn-left").click(function(){		
+
+	$(".about-con3 .btn-left").click(function(){	
+		console.log("888")
 		arr.push(arr.shift());
 		var divs=$(".about-con3 .page-content .bg>div");
 		for(var i=0;i<divs.length;i++){

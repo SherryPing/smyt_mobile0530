@@ -1138,12 +1138,79 @@ margin-bottom:10px ;
 	margin-top: 20px;
 }
 
-.assess6 .card .con .con1{
-	width: 40%;
-	display: inline-block;
-	border: 1px solid red;
+
+
+/*
+ * 主体6
+ * */
+
+.assess6 .card  {
+	opacity: 0.8;
+	font-family: PingFangSC-Regular;
 	font-size: 10px;
-	height: 120px;
+	color: #484848;
+	text-align: justify;
+	width: 100%;
+	display: flex;
+	border-bottom: 1px solid #E5E5E9;
+	
+}
+
+.assess6 .card .con{
+	width: 50%;
+	height: 90px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.assess6 .card .con:nth-child(1){
+	flex: 2;
+}
+
+.assess6 .card .con:nth-child(2){
+	flex: 3;
 }
 
 
+/*
+.assess6 .card .con  .img{
+	border: 1px solid red;
+	width: 125px;
+	height: 86px;
+	margin-top: 20px;
+	width: 40%;
+}
+
+.assess6 .card .con  .img img{
+	float: left;
+}
+*/
+.assess6 .card .con div:nth-child(1){
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #484848;
+	margin-bottom: 10px;
+}
+
+.assess6 .card .con div:nth-child(2){
+	margin-bottom: 15px;
+}
+
+.assess6 .card .con .mui-ellipsis-2 {
+	display: -webkit-box;
+	overflow: hidden;
+	white-space: normal!important;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical
+}
+
+.assess6 .right{
+	float: right;
+}
+
+.assess6 .right img{
+	padding-left:5px;
+}

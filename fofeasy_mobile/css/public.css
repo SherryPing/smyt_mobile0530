@@ -118,3 +118,8 @@ body a,body a:active,body a:hover,body a:link,body a:visited{
 	font-size: 16px;
 	text-align: left;
 }
+
+
+li{
+	list-style-image: url(../img/assess-con2-icon1.png);
+}

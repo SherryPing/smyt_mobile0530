@@ -14,7 +14,7 @@
 			.product_img{
 				height:200px;
 				background: url('img/companynew_01@3x.png') center center no-repeat;
-				background-size: cover;
+				background-size: 100%;
 				width: auto;
 			}
 			.about-con2{
@@ -22,10 +22,13 @@
 				background-size: cover;
 				width: auto;
 			}
+			.about .maincon {
+				padding: 0 20px;
+			}
 			
 		</style>
 	</head>
-	<body class="container-fluid">
+	<body class="container-fluid about">
 		<header class = "load_header"></header>
 		<div class="row">
 			<!--第一部分，背景-->
@@ -37,8 +40,9 @@
 				<div class="title">
 					公司大事件
 				</div>
-				<div class="card" style="background: url('img/companynew_04-04.png') center center no-repeat;">
-					
+				<div class="card">
+					<img class="bg" src="img/about-con1-pic1.png"/>
+					<img class="icon" src="img/scroll-right.png">
 				</div>
 			</div>
 			<!--第三部分，团队介绍-->
@@ -46,14 +50,83 @@
 				<div class="title">
 					团队建设
 				</div>
-				<div class="" style="height: 400px;">
+				<div class="page-company" style="height: 470px;">
+					<div class="page-content">
+						<div class="bg">
+							<div class="item item-index1">
+								<img src="img/companynew_04.png" />	
+								<div class="img-bod">
+								</div>
+								<div class="info popover fade bottom in">
+									<div class="arrow"></div>
+									<div class="popover-content">
+										<div class="name">巫景飞</div>
+										<div class="carrer">私募云通董事长、联合创始人，复旦大学管理学博士上海大学经济学院副教授，硕士生导师</div>
+										<div class="intro">长期从事产业分析与企业战略研究，具有二十年以上管理咨询经验。曾经为包括意大利Ferretti游艇集团、意大利Savio纺机公司、中国商用飞机有限公司、浙江国贸集团、浙江物产集团、浙江东方股份有限公司、汇鸿国际股份有限公司、舟山港集团、杭州联合商业银行、江苏高科技投资集团、舟山市国资委、上海市国资委以及中组部等机构提供过咨询或培训服务。</div>
+										<div class="intro">已在《管理世界》、《中国工业经济》、《财贸经济》、《企业管理》、《中国商业评论》、《上海国资》等多个刊物上发表数十篇经济理论与实务文章，先后主持或参与了国家重点基础研究发展计划（973项目）、国家科技支撑计划、国家社科基金、国家发改委CDM基金、国务院法制办立法研究等多项国家级、省部级研究项目。</div>
+										<div class="intro">2014年，与浙江省浙商资产管理有限公司共同创建“浙商资产管理研究院”，并担任院长一职。<br/>
+2016年4月创立私募云通，任董事长；同年11月出任上海长江时代众创空间数字技术有限公司CEO，金电长时征信公司董事长。</div>
+									</div>									
+								</div>
+							</div>
+							<div class="item item-index2">
+								<img src="img/companynew_14.png" />
+								<div class="img-bod">
+								</div>
+								<div class="info popover fade bottom in">
+									<div class="arrow"></div>
+									<div class="popover-content">
+										<div class="name">李勇</div>
+										<div class="carrer">首席金融顾问，香港中文大学统计学哲学博士学位，中国人民大学汉青经济金融研究院金融系教授、博士生导师、金融专业硕士项目主任、院长助理</div>
+										<div class="intro">盘古智库学术委员，教育部青年长江学者，新加坡管理大学金融学博士后，中国人民大学量化投资研究所所长。</div>
+										<div class="intro">长期以来从事金融计量经济学、量化投资、资产配置方面的研究，在中英文顶级期刊如Journal of Econometrics、Quantitative Finance、Journal of Future market、《经济研究》、《管理世界》等学术杂志共发表文章35篇，其中SSCI/SCI收录23篇，出版学术专著一部，编著一部。</div>
+										<div class="intro">近年来，李教授致力于资产配置特别是FOF和智能投顾的研究，开发了多个FOF和智能投顾的资产配 置模型，致力于搭建FOF和智能投顾模型的量化投资体系，在中央电视台等媒体多次讲授FOF，是多家FOF管理公司的咨询顾问，同时也是证监会、北京市金融局等单位的项目评审专家，也是国家京津冀一体化金融规划的项目参与专家。</div>
+									</div>									
+								</div>								
+							</div>
+							<div class="item item-index3">
+								<img src="img/companynew_10.png" />	
+								<div class="img-bod" style="top: 4px;">
+								</div>
+								<div class="info popover fade bottom in">
+									<div class="arrow"></div>
+									<div class="popover-content">
+										<div class="name">倪中新</div>
+										<div class="carrer">首席数据科学家，上海大学金融学教授、博士生导师，金融信息研究中心主任</div>
+										<div class="intro">主要研究领域：数理统计、金融计量经济、金融风险管理、数量投资分析。曾任教于华东理工大学理学院数学系，先后担任助教、讲师、副教授。期间兼任数学模型竞赛教练，多次指导学生参加国际、国内数学模型竞赛，并荣获国际特等奖一项、国际及国内一等奖多项，具有丰富的数学建模经验。</div>
+										<div class="intro">2013-2014年作为高级研究学者赴美国纽约州立大学石溪分校访学交流。主持及参与完成国家自然科学基金项目、上海市教委科研创新重点项目等多项课题。入选上海市“浦江人才”计划。</div>
+										<div class="intro">近年来在SSCI、SCI检索的国际期刊以及国内重要学术期刊公开发表学术论文30多篇。曾荣获宝钢教育基金优秀教师奖、中国核工业集团公司科学技术奖二等奖、中国数量经济学会优秀论文一等奖等。兼任上海数量经济学会常务理事、中国现场统计学会资源与环境分会理事，European Journal of Operational Research、Quantitative Finance、Computational Economics、Communications in Statistics、《应用概率统计》、《国际贸易问题》等国际及国内重要期刊的审稿人。</div>
+									</div>									
+								</div>
+							</div>
+							<div class="item item-index0">								
+								<img src="img/companynew_07.png" />		
+								<div class="img-bod">
+								</div>
+								<div class="info popover fade bottom in">
+									<div class="arrow"></div>
+									<div class="popover-content">
+										<div class="name">冯美云</div>
+										<div class="carrer">总经理、联合创始人</div>
+										<div class="intro">大连海事大学信息管理专业毕业，长期从事宏观数据、行业数据和和微观数据搭建数据分析框架，利用数据分析手段进行研究、评估和预测，以此支持行业资源优化配置和企业业务策略制定。从业多年，客户分布国内外银行、证券公司、交易所等大型企业机构。</div>
+										<div class="intro">曾就职于证券公司、外资投资咨询公司和研究院，擅长国际宏观经济数据分析，曾主导宏观与金融数据库项目的筹建与上线。擅长数据领域：全球宏观经济、不良资产管理行业、国内私募证券投资基金评价。</div>
+										<div class="intro">项目经验：《CV—全球宏观数据库》、《中宏—全球宏观经济数据》、《浙商资产房地产数据库》、《浙商资产管理研究院不良资产数据库》等。</div>
+									</div>									
+								</div>
+							</div>
+						</div>
+						<div class="btn-box">
+							<div class=" btn-left"></div>
+							<div class=" btn-right"></div>
+						</div>
+					</div>
 					
 				</div>
 			</div>
 			<!--第四部分，公司动态-->
-			<div class="maincon about-con4 " >
-				<div class="leave-white">
-					<div class="mian-title">
+			<div class="maincon about-con4 " style="padding-bottom: 10px;">
+				<!--<div>-->
+					<div class="title">
 						公司动态
 					</div>
 					<!--图片轮播-->
@@ -62,31 +135,41 @@
 							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
 							<div class="mui-slider-item mui-slider-item-duplicate"  >
 								<a href="#">
-									<img src="img/easy@2x.png"  style="border-radius: 5px;">
+									<img src="img/about-con4-pic0.jpg"  style="border-radius: 5px;">
 								</a>
 							</div>
 							<!-- 第一张 -->
 							<div class="mui-slider-item">
 								<a href="#">
-									<img src="img/headerBg2.png" >
+									<img src="img/about-con4-pic4.jpg" >
 								</a>
 							</div>
 							<!-- 第三张 -->
 							<div class="mui-slider-item">
 								<a href="#">
-									<img src="img/productAndService.png" >
+									<img src="img/about-con4-pic3.jpg" >
 								</a>
 							</div>
 							<!-- 第四张 -->
 							<div class="mui-slider-item">
 								<a href="#">
-									<img src="img/easy@2x.png" >
+									<img src="img/about-con4-pic2.jpg" >
+								</a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="img/about-con4-pic1.jpg" >
+								</a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="img/about-con4-pic0.jpg" >
 								</a>
 							</div>
 							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
 							<div class="mui-slider-item mui-slider-item-duplicate">
 								<a href="#">
-									<img src="img/headerBg2.png" >
+									<img src="img/about-con4-pic4.jpg" >
 								</a>
 							</div>
 						</div>
@@ -94,10 +177,22 @@
 							<div class="mui-indicator mui-active"></div>
 							<div class="mui-indicator"></div>
 							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
 						</div>
 					</div>
 					<div class="div" >
-						<div class="mui-table-view" >
+						<a class="mui-table-view" href="https://mp.weixin.qq.com/s/K-3o9LMnlQ1yaqNUzGB5lQ">
+							<img class="mui-media-object mui-pull-left" src="img/about-news-page1_1.png">
+							<div class="mui-media-body">
+								<div class="link">私募云通获Pre-A轮融资</div>
+								<div class='mui-ellipsis-2'>
+									2017年9月21日第二届云+FOF生态圈共建峰会“大数据时代的资产配置”在上海外国语大学顺利落下帷幕。本次峰会由私募云通、腾讯云主办，得到了长江众创
+								</div>
+								<div>2017-9-21</div>
+							</div>
+						</a>
+						<a class="mui-table-view" "https://mp.weixin.qq.com/s/QJT7rBuAB0jifUWAZQC1Hg">
 							<img class="mui-media-object mui-pull-left" src="img/003.png">
 							<div class="mui-media-body">
 								<div> 第二届“云+FOF”生态圈共建峰会 </div>
@@ -106,8 +201,8 @@
 								</div>
 								<div>2017-9-21</div>
 							</div>
-						</div>
-						<div class="mui-table-view" >
+						</a>
+						<a class="mui-table-view" href="https://mp.weixin.qq.com/s/wxK-JqBUH6ERVARxupTkAw">
 							<img class="mui-media-object mui-pull-left" src="img/003.png">
 							<div class="mui-media-body">
 								<div> 第二届“云+FOF”生态圈共建峰会 </div>
@@ -116,8 +211,8 @@
 								</div>
 								<div>2017-9-21</div>
 							</div>
-						</div>
-						<div class="mui-table-view" >
+						</a>
+						<a class="mui-table-view" href="https://mp.weixin.qq.com/s/_TTIIvlfYLLmjAU5BYDyOw">
 							<img class="mui-media-object mui-pull-left" src="img/003.png">
 							<div class="mui-media-body">
 								<div> 第二届“云+FOF”生态圈共建峰会 </div>
@@ -126,9 +221,19 @@
 								</div>
 								<div>2017-9-21</div>
 							</div>
-						</div>
+						</a>
+						<a class="mui-table-view" href="https://mp.weixin.qq.com/s/heFl1I2X-ZjrAjNy5i0SQg">
+							<img class="mui-media-object mui-pull-left" src="img/003.png">
+							<div class="mui-media-body">
+								<div> 第二届“云+FOF”生态圈共建峰会 </div>
+								<div class='mui-ellipsis-2'>
+									2017年9月21日第二届云+FOF生态圈共建峰会“大数据时代的资产配置”在上海外国语大学顺利落下帷幕。本次峰会由私募云通、腾讯云主办，得到了长江众创
+								</div>
+								<div>2017-9-21</div>
+							</div>
+						</a>
 					</div>
-				</div>
+				<!--</div>-->
 			</div>
 		</div>
 		<footer class="load_footer"></footer>

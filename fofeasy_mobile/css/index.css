@@ -1348,8 +1348,6 @@ margin-bottom:10px ;
  * 评价服务
  * */
 
-
-
 .assess2 .card .con .con1{
 	display: inline-block;
 	height: 120px;
@@ -1385,22 +1383,21 @@ margin-bottom:10px ;
 
 
 .assess3 li{
-	
 	font-family: Helvetica;
 	font-size: 10px;
 	color: #484848;
 	text-align: justify;
 	line-height: 14px;
-	margin-top: 20px;
+	margin-top: 10px;
 }
+
 .assess4 li{
-	
 	font-family: Helvetica;
 	font-size: 10px;
 	color: #484848;
 	text-align: justify;
 	line-height: 14px;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 
@@ -1437,20 +1434,6 @@ margin-bottom:10px ;
 	flex: 3;
 }
 
-
-/*
-.assess6 .card .con  .img{
-	border: 1px solid red;
-	width: 125px;
-	height: 86px;
-	margin-top: 20px;
-	width: 40%;
-}
-
-.assess6 .card .con  .img img{
-	float: left;
-}
-*/
 .assess6 .card .con div:nth-child(1){
 	font-family: PingFangSC-Regular;
 	font-size: 14px;
@@ -1479,3 +1462,49 @@ margin-bottom:10px ;
 .assess6 .right img{
 	padding-left:5px;
 }
+
+
+
+/*
+ * 服务指数
+ * */
+
+.exponent .strategy{
+	font-family: PingFangSC-Semibold;
+	font-size: 16px;
+	color: #3D5668;
+	letter-spacing: 1.2px;
+	text-align: center;
+	line-height: 26px;
+}
+
+.exponent3 .mian-title{
+	border-left:4px solid #9FDBFE ;
+	border-bottom: 0;
+	text-indent: 1rem;
+	height: 20px;
+	line-height: 20px;
+}
+
+.exponent4 li{
+	font-family: Helvetica;
+	font-size: 10px;
+	color: #484848;
+	text-align: justify;
+	line-height: 14px;
+	margin-top: 10px;
+}
+
+
+/*
+ 研究院
+ * */
+.institution1 li{
+	font-family: Helvetica;
+	font-size: 10px;
+	color: #484848;
+	text-align: justify;
+	line-height: 14px;
+	margin-top: 10px;
+}
+

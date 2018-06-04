@@ -116,7 +116,7 @@ function loadFundData(){
             	}else if(name=="fofeasy"){
             		$(".easy-con3 #hedge-sum").text(hedgeNum);
         			$(".easy-con3 #mutual-sum").text(mutualNum);
-            		$(".easy-con3 .static-fofeasy-date").text(staticdate);
+            		$(".easy-con3 .now-date").text(staticdate);
         			var hedgeDiv="";
         			var mutualDiv="";
         			for(var i=0;i<hedgeAll.fund_type.length;i++){

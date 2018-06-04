@@ -9,12 +9,18 @@
 		<script src="js/public.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="css/public.css" />
 		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/highcharts.js"></script>
     	<style type="text/css">
     		.product_img{  			
     			height:245px;
-    			background: url('img/top-bg-exponential.png') top center no-repeat;
+    			background: url('img/exponent-bg-head@2x.png') top center no-repeat;
     			background-size: 100%;
     		}
+    		
+    		.exponent4 li{
+    			margin-left: 20px;
+				list-style-image: url(img/assess3.png);
+			}
     		/*.sy-header .head {
 			    background: transparent;
 			}*/
@@ -22,14 +28,158 @@
 	</head>
 	<body class="container-fluid">
 		<header class = "load_header"></header>		
-		<div class="row">
+		<div class="row exponent">
 			<!--头部背景-->
-			<div class="product_img" >
+			<div class="product_img" style="color: white;">
+				<div class="bg-content">
+					<div class="bg-title" >
+						基金评价
+					</div>
+				</div>
 			</div>
 			<!--主体1-->
-			<div class="maincon introduce">
+			<div class="exponent1 leave-white"  style="height: 500px;" >
+				<div class="mian-title "  >
+					策略指数
+				</div>
 				<div class="sub-introduce">
-					FoF Easy V2.0是一款一款以私募基金查询与组合管理为主要功能的在线工具，基于后台强大的数据库，运用SAAS模式，帮助金融资管机构掌握私募基金市场行情，查询相关基金相关信息，并可以辅助进行产品组合设计和动态跟踪，及时提示风险。
+					私募云通--中国私募证券投资基金指数体系基于优秀的私募云通--私募基金数据库，并充分借鉴国际和国内指数编制方法，结合国内私募基金的发展特点与规律，以专业、独立、审慎的精神开发的指数体系，旨在及时、客观地记录和反映中国内地私募基金市场的整体表现、发展历史、现状及其趋势，为投资者了解、分析、投资私募基金，提供业绩比较的基准和收益分析的工具。
+				</div>
+			
+				<div class="strategy">私募云通策略指数</div>
+				<div id="hedgeLineChart" class="hedgeLineChart" style="width: 100%;height: 300px;">
+					<p class="loading">正在加载中，请稍等……</p>
+				</div>
+			</div>
+			
+			<!--主体3-->
+			<div class="exponent2 leave-white">
+				<div class="mian-title">
+					HFMI私募基金管理人指数
+				</div>
+				<div class="sub-introduce">
+					HFMI（Hedge Fund Manager Index）指数由私募云通与中国人民大学量化投资研究所联合研究编制，旨在反映中国私募基金行业的增长或衰退。通过HFMI指数，私募基金经理可以及时了解同行对资本市场的观点和看法，更好地进行投资决策。HFMI指数的荣枯也反映了私募基金经理们的投资信心，将成为中国金融市场发展的“晴雨表”。HFMI指数的调查对象均为资深而专业的基金经理，采用定向邀请、匿名填写的方式完成调查。
+				</div>
+			
+				<div class="strategy">
+					HFMI私募基金管理人指数
+				</div>
+				<div id="hfmiChart" class="hfmiChart" style="width: 100%;height: 150px;">
+					<p class="loading">正在加载中，请稍等……</p>
+				</div>
+			</div>
+			
+			<!--主体5  往期报告-->
+			<!--<div class="exponent-5 leave-white">
+				<div class="">
+					
+				</div>
+				<div class="card">
+					
+				</div>
+			</div>-->
+			<div class="exponent3 assess6 leave-white" >
+				<div class="mian-title " >
+					往期报告
+				</div>
+				<div class="card ">
+					<div class="con " >
+						<div class="img">
+							<img src="img/exponent-report.png"/>
+						</div>
+					</div>
+					<div class="con">
+						<div>2018年3月【HFMI 指数】报告</div>
+						<div class="mui-ellipsis-2">2018年3月HFMI指数为56.78，环比下跌4.44%，私募基金经理对于私募后市行情指数由私募云通与中国人民大学量化投资研究所联合研究编制，旨在反映中国私募基金行业的增长或衰退。</div>
+						<div>2018-01-18 
+							<span class="right">
+								<a href="https://mp.weixin.qq.com/s/iHKiSG0UOdGO32AUQG3YnA"  target="_blank">
+									<span>查看详情</span>
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="card ">
+					<div class="con " >
+						<div class="img">
+							<img src="img/exponent-report.png"/>
+						</div>
+					</div>
+					<div class="con">
+						<div>2018年3月【HFMI 指数】报告</div>
+						<div class="mui-ellipsis-2">2018年3月HFMI指数为56.78，环比下跌4.44%，私募基金经理对于私募后市行情指数由私募云通与中国人民大学量化投资研究所联合研究编制，旨在反映中国私募基金行业的增长或衰退。</div>
+						<div>2018-01-18 
+							<span class="right">
+								<a href="https://mp.weixin.qq.com/s/iHKiSG0UOdGO32AUQG3YnA"  target="_blank">
+									<span>查看详情</span>
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="card ">
+					<div class="con " >
+						<div class="img">
+							<img src="img/exponent-report.png"/>
+						</div>
+					</div>
+					<div class="con">
+						<div>2018年3月【HFMI 指数】报告</div>
+						<div class="mui-ellipsis-2">2018年3月HFMI指数为56.78，环比下跌4.44%，私募基金经理对于私募后市行情指数由私募云通与中国人民大学量化投资研究所联合研究编制，旨在反映中国私募基金行业的增长或衰退。</div>
+						<div>2018-01-18 
+							<span class="right">
+								<a href="https://mp.weixin.qq.com/s/iHKiSG0UOdGO32AUQG3YnA"  target="_blank">
+									<span>查看详情</span>
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<nav class="pull-right" aria-label="Page navigation" style="">
+					  <ul class="pagination">
+					    <li>
+					      <span aria-label="Previous">
+					        <span aria-hidden="true">«</span>
+					      </span>
+					    </li>
+					    <li class="active"><span>1</span></li>
+					    <li>
+					      <span aria-label="Next">
+					        <span aria-hidden="true">»</span>
+					      </span>
+					    </li>
+					  </ul>
+					</nav>
+				</div>
+			</div>
+			
+			<div >
+				<img src="img/exponent-apply.png"/>
+			</div>
+			
+			<div class="exponent4  leave-white" style="height: 450px;">
+				<div class="mian-title">
+					指数定制服务
+				</div>
+				<div class="card">
+					<ul>
+						<li>
+							私募云通可根据客户需求，为客户提供指数定制服务。
+						</li>
+						<li>
+							私募云通深度参与华泰证券量化Q指数大赛，并提供数据支持及指数编制服务。
+						</li>
+					</ul>
+				</div>
+				<div class="strategy">
+					华泰私募Q指数收益率曲线
+				</div>
+				<div id="qLineChart" class="hedgeLineChart" style=" height: 300px;">
+					<p class="loading" style="top: 80px;">正在加载中，请稍等……</p>
 				</div>
 			</div>
 		</div>
@@ -40,4 +190,208 @@
 			
 		</footer>
 	</body>
+	
+	<script >
+		
+		var colors2=["#009cff","#ff5095","#a421fd","#f75701","#0000fe","#fcd204","#8dd0df","#f77bd1","#62d8ff","#f39dc2","#c7c8c2"];
+		function fmtRatio(val, index) {
+			//index默认值为2
+			var index = arguments[1] ? arguments[1] : 2;
+		
+			if(val == null || isNaN(val) || typeof(val) == "string" && val == '') {
+				return '--';
+			}
+			var ratio = (val * 100).toFixed(index);
+			return ratio + "%";
+		}
+		//格式日期
+		function formDate(val) {
+			return val?val.substring(0,7):"--";
+		}
+		
+		
+		//		 //私募分策略业绩指数情况
+//  function performance(){
+        $.ajax({
+            url: "https://wxapi.fofeasy.com/base/fund/home/index_trend",
+//			url: "http://192.168.11.135:8000/base/fund/home/index_trend",
+            type: 'get',
+            contentType: "application/json;charset=utf-8",
+            data: {},
+            success: function (resp) {
+                if(resp.success){
+                	 //图
+                    var categories = resp.records[0].date;
+                    var series = [];
+                    for(var i=0;i< resp.records.length;i++){
+                        var se={};
+                        se.data=resp.records[i].data;
+                        se.name=resp.records[i].latest.index_name;
+                        se.fillColor={
+                            linearGradient: [0, 0, 0, 200],
+                            stops: [
+                                [0, colors2[i]],
+                                [1, Highcharts.Color(colors2[i]).setOpacity(0).get('rgba')]
+                            ]
+                        },
+                        series.push(se);
+                    }
+                    $.each(series, function(i, n) {
+                        if (n.name != '私募FOF指数'&&n.name != '股票多头策略私募指数') {
+                            series[i].visible = false;
+                            //gs.series[i].yAxis = 1;
+                        }
+                    })
+                     initArea($("#hedgeLineChart"),{date:categories,series:series},{
+                     	x_tickmarkPlacement:'between',
+                        color:colors2,
+                        reservations : 'percent2',
+                        'lineWidth':2,
+                        markerRadius:1,
+                        legend:{
+                            enabled:true,
+                        },
+                        type:"areaspline" ,
+                    })
+                }
+            }
+        });
+		
+		
+		//HFMI
+		var hfmiSeries=[
+			{name:"HFMI指数",data:[0.5799, 0.5942, 0.5678,0.5667],fillColor:{linearGradient: [0, 0, 0, 200],stops: [[0, "#22BFFF"],[1, Highcharts.Color("#22BFFF").setOpacity(0).get('rgba')]]}}
+		];
+		var hfmiCato= ['2018-01', '2018-02', '2018-03','2018-04'];
+		initArea($("#hfmiChart"),{date:hfmiCato,series:hfmiSeries},{
+         	x_tickmarkPlacement:'between',
+            color:['#22BFFF'],
+            reservations : 'percent2',
+            'lineWidth':2,
+            markerRadius:1,
+            legend:{
+           
+            },
+            type:"areaspline" ,
+            min:0.50
+        })
+		
+		
+		
+		//	私募q指数
+		var qSeries=[
+			{name:"私募Q指数",data:[1000, 1006.58, 1012.09,1013.55,1021.12,1025.06,1034.56,1049.03,1057.36,1066.03,1066.53,1076.5,1084.45,1084.45,1090.38,1093.68,1104.35,1109.78,1124.72,1123.03,1122.14,1118.22,1122.16,1124.27,1141.46,1139.48],fillColor:{linearGradient: [0, 0, 0, 200],stops: [[0, "#22BFFF"],[1, Highcharts.Color("#22BFFF").setOpacity(0).get('rgba')]]}}
+		];
+		var qCato= ['2017-07-07', '2017-07-14', '2017-07-21','2017-07-28','2017-08-04','2017-08-11','2017-08-18','2017-08-25','2017-09-01','2017-09-08','2017-09-15','2017-09-22','2017-09-29','2017-10-06','2017-10-13','2017-10-20','2017-10-27','2017-11-03','2017-11-10','2017-11-17','2017-11-24','2017-12-01','2017-12-08','2017-12-15','2017-12-22','2017-12-29'];
+		initArea($("#qLineChart"),{date:qCato,series:qSeries},{
+         	x_tickmarkPlacement:'between',
+            color:['#22BFFF'],
+			//reservations : 'percent2',
+			rotation:'-45',
+            'lineWidth':2,
+            markerRadius:1,
+            legend:{
+           
+            },
+            type:"areaspline" ,
+            min:900
+        })
+		
+		
+		//初始化面积图
+		function initArea(dom, resp, data) {
+		dom.highcharts({
+			chart : {
+				zoomType : data.zoomType,
+				type : data.type||'area'
+			},
+			colors : data.color || [ '#2765B9', '#2C8CF8', '#FB88B3', '#D72F54', '#9370DB' ],
+			title : {
+				text : ' '
+			},
+			xAxis : {
+				type : data.xType||"categories",
+				categories : resp.date,
+	            labels : {
+	            	rotation : data.rotation||0,
+	            },
+				tickmarkPlacement : data.x_tickmarkPlacement || 'on',
+				dateTimeLabelFormats : data.xDateTimeLabelFormats||{
+					millisecond : '%H:%M:%S.%L',
+					second : '%H:%M:%S',
+					minute : '%H:%M',
+					hour : '%H:%M',
+					day : '%Y-%m-%d',
+					week : '%Y-%m-%d',
+					month : '%Y-%m-%d',
+					year : '%Y-%m-%d'
+				}
+			},
+			yAxis : {
+				labels : {
+					formatter : function() { //根据传入进行y轴格式化区分
+						if (data.reservations == "percent"||data.reservations == "percent1") {
+							return this.value.toFixed(0) + "%";
+						} else if (data.reservations == "percent2") {
+							return fmtRatio(this.value,2);
+						} else {
+							return this.value;
+						}
+					},
+				},
+				min : data.min || null,
+				title : " "
+			},
+			tooltip : {
+				pointFormatter : function() {
+					var value = null;
+					var text="";
+					if (data.reservations == "percent"||data.reservations == "percent2") {
+						value = fmtRatio(this.y);
+					} else {
+						value = this.y;
+					}
+					return '<span style="color:black">' + this.series.name + '</span>: <b>' + value + '</b>'+text+ '<br/>';
+				},
+				dateTimeLabelFormats : data.tDateTimeLabelFormats||{
+					millisecond : '%H:%M:%S.%L',
+					second : '%H:%M:%S',
+					minute : '%H:%M',
+					hour : '%H:%M',
+					day : '%Y-%m-%d',
+					week : '%Y-%m-%d',
+					month : '%Y-%m-%d',
+					year : '%Y-%m-%d'
+				},
+				shared : true
+			},
+			legend : {
+				enabled : data.legend.enabled || false, //是否显示图例 false
+				layout : 'horizontal', //布局 horizontal vertical
+				align : 'center', //图表对其方式center right
+				verticalAlign :  'bottom', //垂直对齐方式 bottom middle
+				borderWidth :  0,
+			},
+			plotOptions : {
+	            series : {
+					stacking : data.stacking||null,
+					lineColor : data.lineColor,
+					lineWidth : data.lineWidth||1,
+					marker : {
+						lineWidth : data.markerLineWidth||0,
+						radius : data.markerRadius||4,
+					},
+	                fillColor: data.fillColor||null
+				},
+			},
+			credits : {
+				enabled : false //不显示highcharts链接
+			},
+	        exporting : {
+	            enabled : false //设置导出按钮不可用
+	        },
+			series : resp.series
+		});
+	}
+	</script>
 </html>

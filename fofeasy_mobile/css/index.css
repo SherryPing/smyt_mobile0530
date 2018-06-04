@@ -804,6 +804,8 @@ margin-bottom:10px ;
 }
 
 .about-con3 .page-company .item-index2 {
+	width: 50px;
+    height: 50px;
 	opacity: 0;
 	left: calc(50% - 50px);
 	top: 5px;
@@ -916,7 +918,9 @@ margin-bottom:10px ;
 	margin-bottom: 10px;
 }
 
-.mui-table-view .mui-media-object{
+.about-con4 .mui-table-view .mui-media-object{
+	border-radius: 4px 0 0 4px;
+	width: 120px;
     max-width: 120px;
     height: 120px;
 }
@@ -931,9 +935,9 @@ margin-bottom:10px ;
 	text-align: left;
 }
 
-.mui-ellipsis-2 {
+/*.mui-ellipsis-2 {
 	-webkit-line-clamp: 3;
-}
+}*/
 /*各页头部背景图片高度*/
 .product_img {
 	height: 200px !important;
@@ -1478,4 +1482,35 @@ margin-bottom:10px ;
 
 .assess6 .right img{
 	padding-left:5px;
+}
+/*基查查*/
+.jcc-con2>div{
+	height: 43px;
+	line-height: 43px;
+	font-size: 12px;
+	color: #484848;
+	text-align: left;
+}
+.jcc-con2 img {
+	width: 37px;
+}
+.jcc .jcc-btn {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;	
+	margin: 20px 0;
+	border-radius: 4px;
+	background: #F14F2F;
+}
+.jcc .jcc-btn a {
+	width: 100%;
+	color: #fff;
+}
+.jcc-con1  {
+	position: absolute;
+	top: 250px;
+	font-size: 10px;
+	color: #484848;
+	letter-spacing: -0.29px;
+	text-align: left;
 }

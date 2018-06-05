@@ -1615,6 +1615,17 @@ margin-bottom:10px ;
 	display:table;
 	width: calc(100% - 176px);
 	height: 178px;
+	float: left;
+}
+.ins-con3>.title {
+	font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+    border-bottom: 1px solid #E5E5E9;
+    font-family: PingFangSC-Regular;
+    color: #484848;
+    letter-spacing: 1.2px;
+    margin: 20px;
 }
 .ins-con3 .con .left-p>div {
 	text-align: center;
@@ -1623,11 +1634,12 @@ margin-bottom:10px ;
 }
 .ins-con3 .con .left-p .v1 {
 	position: relative;
+	margin-top: 15px;
 }
 .ins-con3 .con .left-p .v1 img {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 2px;
+    left: 32px;
 	width: 16px;
 }
 .ins-con3 .con .left-p .v1 .title {
@@ -1640,12 +1652,170 @@ margin-bottom:10px ;
 .ins-con3 .con .left-p .v1 .detail {
 	opacity: 0.8;
 	font-size: 10px;
-	line-height: 30px;
-	height: 30px;
-	text-align: left;
+	line-height: 18px;
+	height: 18px;
+	text-align: center;
 }
 .ins-con3 .con .right-p {
 	width: 176px;
+	height: 178px;
 	background: url(../img/ins-con3-pic.png) center center no-repeat;
 	background-size: 176px 178px;
+}
+.ins-con4 .card{
+	margin-top: 20px;
+	color: #484848;
+	text-align: left;
+}
+.ins-con4 .card .title {
+	height: 20px;
+	line-height: 20px;	
+}
+.ins-con4 .card .title span {
+	vertical-align: top;
+}
+.ins-con4 .card .title:before{
+   content: '';
+   display: inline-block;
+   height: 20px;
+   width: 4px;
+   background-image: url(../img/ins-con4-icon.png);
+   background-size: 4px 20px;
+}
+.ins-con4 .card .title .t1 {
+	font-size: 16px;
+	font-weight: 600;
+}
+.ins-con4 .card .title hr {
+	display: inline-block;
+	width: 20px;
+	border-bottom: 0.5px solid #E5E5E9;
+	margin: 0 10px 9px;
+}
+.ins-con4 .card .title .t2 {
+	font-size: 14px;
+}
+.ins-con4 .card .sub-title2,.ins-con4 .card .sub-title3 {
+	margin: 5px 0;
+}
+
+.ins-con4 .card .sub-title2 span,.ins-con4 .card .sub-title3 span{
+	display: inline-block;
+	font-size: 12px;
+	height: 15px;	
+	line-height: 15px;
+	text-align: center;
+	padding: 0 12px;
+	color: rgba(72,72,72,0.8);
+	border-right: 1px solid #E5E5E9;
+}
+.ins-con4 .card .sub-title3 span {
+	font-size: 10px;
+	color: rgba(72,72,72,0.4);
+}
+.ins-con4 .card .sub-title2 span:first-child,.ins-con4 .card .sub-title3 span:first-child {
+	padding: 0 12px 0 0;
+}
+.ins-con4 .card .sub-title2 span:last-child,.ins-con4 .card .sub-title3 span:last-child {
+	border-right:none;
+}
+.ins-con4 .card .con {
+	font-size: 10px;
+	color: rgba(72,72,72,0.6);
+	line-height: 15px;
+	margin-top: 10px;
+}
+.ins-con4 .card .con p:before{
+	content: '';
+    display: inline-block;
+    height: 12px;
+    width: 26px;
+    background: url(../img/ins-icon1.png) left center no-repeat;
+    background-size: 16px 12px;
+}
+.ins-con4 .card .con p {
+    margin: 0 0 5px;
+}
+.ins-con4 .card .con .name {
+	font-size: 12px;
+	color: rgba(72,72,72,0.8);
+}
+.ins-con4 .card .con div {
+	font-size: 10px;
+	color: rgba(72,72,72,0.6);
+	line-height: 14px;
+	margin-bottom: 10px;
+}
+.ins-con5 .con-bg {
+	height: 135px;
+	background: url(../img/ins-con5-pic.png) center center no-repeat;
+	background-size: 242px auto;
+	margin: 20px 0;
+}
+.ins-con5 .con {
+	font-size: 10px;
+	color:  #484848;
+	line-height: 14px;
+	margin: 10px 0;
+	text-align: left;
+}
+.ins-con5 .con .name {
+	color: #1E1E1E;
+}
+.ins-con6 .con-bg {
+	height: 162px;
+	background: url(../img/ins-con6-pic.png) center center no-repeat;
+	background-size: 334px auto;
+	margin: 20px 0;
+}
+.ins-con7 .card {
+	display: table;
+	min-height: 94px;
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,0.22);
+	border-radius: 2px;
+	padding: 10px 10px 10px 0;	
+	margin: 10px 0;
+	width: 100%;
+}
+.ins-con7 .card >div {
+	display: inline-block;
+	vertical-align: top;
+	color: #484848;
+}
+.ins-con7 .card  .left-p {
+	width: 70px;
+	text-align: center;
+}
+.ins-con7 .card  .left-p .name {
+	font-size: 12px;
+}
+.ins-con7 .card  .left-p img{
+	width: 44px;
+	margin: 5px 0;
+}
+.ins-con7 .card  .right-p {
+	width: calc(100% - 75px);
+	line-height: 25px;
+	font-size: 10px;	
+	text-align: left;
+	display: table-cell;
+    vertical-align: middle;
+}
+.ins-con7 .card  .right-p>div:before {
+	content: '';
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background: url(../img/ins-icon2.png) left center no-repeat;
+    background-size: 7px 11px;
+}
+.ins-con8 {
+	font-size: 10px;
+	color: rgba(72,72,72,0.8);
+	text-align: left;
+	line-height: 14px;
+	margin-top: 20px;
+}
+.ins-con8>div {
+	margin: 5px 0;
 }

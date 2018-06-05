@@ -62,6 +62,38 @@ $(function(){
 		}
 	})
 	loadFundData();
+	
+		//pernum:每页展示的子div的数量;pageNum:第几页
+	function page(perNum,pageNum){
+		var start=(pageNum-1)*perNum;
+		var end=start+perNum;
+		console.log(start,end)
+		$(".pagination-div>div").css("display","none")
+		$(".pagination-div>div").slice(start,end).css("display","flex")
+	}
+//	指数分页
+	$(".exponential .pagination li").click(function(){			
+		var pageNum=$(this).data("id");
+		if(pageNum=="prev"){
+			var tempNum=$(".exponential .pagination li.active").data("id")-1;
+			if(tempNum>0){
+				pageNum=tempNum;
+			}else{
+				pageNum=1;
+			}
+		}else if(pageNum=="next"){
+			var tempNum2=Number($(".exponential .pagination li.active").data("id"))+1;
+			var amount=$(this).prev().data("id")
+			if(tempNum2<amount){
+				pageNum=tempNum2;
+			}else{
+				pageNum=amount;			
+			}
+		}
+		$(".exponential .pagination li").removeClass("active");	
+		$(".exponential .pagination li[data-id="+pageNum+"]").addClass("active");
+		page(3,pageNum)
+	})
 })
 
 

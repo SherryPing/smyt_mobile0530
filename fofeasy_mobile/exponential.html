@@ -11,7 +11,6 @@
 		<link rel="stylesheet" href="css/index.css" />
 		<script src="js/highcharts.js"></script>
 		
-		<script type="text/javascript" src="js/bootstrap.min.js"> </script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     	<style type="text/css">
     		.product_img{  			
@@ -20,10 +19,7 @@
     			background-size: 100%;
     		}
     		
-    		.exponent4 li{
-    			margin-left: 20px;
-				list-style-image: url(img/assess3.png);
-			}
+    		
 			
 			.assess6 .card .con:nth-child(1) {
 				background:url('img/assess6-report@2x.png') top left no-repeat;
@@ -34,7 +30,7 @@
 			}*/
     	</style>
 	</head>
-	<body class="container-fluid">
+	<body class="container-fluid exponential">
 		<header class = "load_header"></header>		
 		<div class="row exponent">
 			<!--头部背景-->
@@ -56,7 +52,7 @@
 			
 				<div class="strategy">私募云通策略指数</div>
 				<div id="hedgeLineChart" class="hedgeLineChart" style="width: 100%;height: 300px;">
-					<p class="loading">正在加载中，请稍等……</p>
+					<p class="loading" style="line-height: 200px;">正在加载中，请稍等……</p>
 				</div>
 			</div>
 			
@@ -79,22 +75,23 @@
 			
 			<!--主体5  往期报告-->
 			
-			<div class="exponent3 assess6 leave-white" >
+			<div class="exponent3 assess6 leave-white " >
 				<div class="mian-title " >
 					往期报告
 				</div>
+				<div class="pagination-div">
 				<div class="card ">
 					<div class="con " >
 						<div class="img" >
 							<div class="quarterly" >
-								2018年11月
+								2018年4月
 							</div>
 						</div>
 					</div>
 					<div class="con">
-						<div>2018年3月【HFMI 指数】报告</div>
-						<div class="mui-ellipsis-2">2018年3月HFMI指数为56.78，环比下跌4.44%，私募基金经理对于私募后市行情指数由私募云通与中国人民大学量化投资研究所联合研究编制，旨在反映中国私募基金行业的增长或衰退。</div>
-						<div>2018-01-18 
+						<div>2018年4月【HFMI 指数】报告</div>
+						<div class="mui-ellipsis-2">2018年4月HFMI指数为56.67，环比下跌0.20%，私募基金经理对于私募后市行情的发展</div>
+						<div>2018-05-11 
 							<span class="right">
 								<a href="https://mp.weixin.qq.com/s/iHKiSG0UOdGO32AUQG3YnA"  target="_blank">
 									<span>查看详情</span>
@@ -108,16 +105,16 @@
 					<div class="con " >
 						<div class="img" >
 							<div class="quarterly" >
-								2018年11月
+								2018年3月
 							</div>
 						</div>
 					</div>
 					<div class="con">
 						<div>2018年3月【HFMI 指数】报告</div>
 						<div class="mui-ellipsis-2">2018年3月HFMI指数为56.78，环比下跌4.44%，私募基金经理对于私募后市行情指数由私募云通与中国人民大学量化投资研究所联合研究编制，旨在反映中国私募基金行业的增长或衰退。</div>
-						<div>2018-01-18 
+						<div>2018-03-06 
 							<span class="right">
-								<a href="https://mp.weixin.qq.com/s/iHKiSG0UOdGO32AUQG3YnA"  target="_blank">
+								<a href="https://wxgzh.fofpower.com/HFMI201803.html"  target="_blank">
 									<span>查看详情</span>
 								</a>
 							</span>
@@ -129,14 +126,35 @@
 					<div class="con " >
 						<div class="img" >
 							<div class="quarterly" >
-								2018年11月
+								2018年2月
 							</div>
 						</div>
 					</div>
 					<div class="con">
-						<div>2018年3月【HFMI 指数】报告</div>
-						<div class="mui-ellipsis-2">2018年3月HFMI指数为56.78，环比下跌4.44%，私募基金经理对于私募后市行情指数由私募云通与中国人民大学量化投资研究所联合研究编制，旨在反映中国私募基金行业的增长或衰退。</div>
-						<div>2018-01-18 
+						<div>2018年2月【HFMI 指数】报告</div>
+						<div class="mui-ellipsis-2">2018年2月HFMI指数为59.42，大于50，且高于前期值，表示私募行业呈持续上升，以及</div>
+						<div>2018-02-05 
+							<span class="right">
+								<a href="https://wxgzh.fofpower.com/HFMI201802.html"  target="_blank">
+									<span>查看详情</span>
+								</a>
+								
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="card " style="display: none;">
+					<div class="con " >
+						<div class="img" >
+							<div class="quarterly" >
+								2018年1月
+							</div>
+						</div>
+					</div>
+					<div class="con">
+						<div>2018年月【HFMI 指数】报告</div>
+						<div class="mui-ellipsis-2">HFMI指数以50为荣枯分水线，2018年1月HFMI指数为57.99，大于50，表示私募数据</div>
+						<div>2018-01-05 
 							<span class="right">
 								<a href="https://mp.weixin.qq.com/s/iHKiSG0UOdGO32AUQG3YnA"  target="_blank">
 									<span>查看详情</span>
@@ -144,19 +162,25 @@
 							</span>
 						</div>
 					</div>
+				</div>
 				</div>
 				<div class="page" style="height: 80px;">
-					<nav class="pull-right" aria-label="Page navigation" style="">
-					  <ul class="pagination">
-					    <li>
+					<nav aria-label="Page navigation">
+					  <ul class="pagination pagination-sm pull-right">
+					    <li data-id="prev">
 					      <span aria-label="Previous">
-					        <span aria-hidden="true">«</span>
+					        <span aria-hidden="true">&laquo;</span>
 					      </span>
 					    </li>
-					    <li class="active"><span>1</span></li>
-					    <li>
+					    <li data-id="1"  class="active"><span>1</span></li>
+					    <li data-id="2"><span>2</span></li>
+					    <!--<li data-id="3"><span>3</span></li>-->
+					    <!--<li class="disabled"><span>3</span></li>
+					    <li class="disabled"><span>4</span></li>
+					    <li class="disabled"><span>5</span></li>-->
+					    <li data-id="next">
 					      <span aria-label="Next">
-					        <span aria-hidden="true">»</span>
+					        <span aria-hidden="true">&raquo;</span>
 					      </span>
 					    </li>
 					  </ul>
@@ -174,7 +198,7 @@
 			
 			
 			<!-- 模态框（Modal） -->
-			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 80%;margin: 0 auto;margin-top: 200px;">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -204,9 +228,11 @@
 				<div class="card">
 					<ul>
 						<li>
+							<img src="img/assess3@2x.png"/>
 							私募云通可根据客户需求，为客户提供指数定制服务。
 						</li>
 						<li>
+							<img src="img/assess3@2x.png"/>
 							私募云通深度参与华泰证券量化Q指数大赛，并提供数据支持及指数编制服务。
 						</li>
 					</ul>
@@ -215,11 +241,10 @@
 					华泰私募Q指数收益率曲线
 				</div>
 				<div id="qLineChart" class="hedgeLineChart" style=" height: 300px;">
-					<p class="loading" style="top: 80px;">正在加载中，请稍等……</p>
+					<p class="loading" style="top: 180px;">正在加载中，请稍等……</p>
 				</div>
 			</div>
 		</div>
-		
 		
 		
 		<footer class="load_footer">
@@ -247,10 +272,10 @@
 		
 		
 		//		 //私募分策略业绩指数情况
-//  function performance(){
+	//  function performance(){
         $.ajax({
             url: "https://wxapi.fofeasy.com/base/fund/home/index_trend",
-//			url: "http://192.168.11.135:8000/base/fund/home/index_trend",
+		//	url: "http://192.168.11.135:8000/base/fund/home/index_trend",
             type: 'get',
             contentType: "application/json;charset=utf-8",
             data: {},
@@ -289,7 +314,10 @@
                         color:colors2,
                         reservations : 'percent2',
                         'lineWidth':2,
+                        rotation:'-45',
                         markerRadius:1,
+                        x_itemStyle:{ "color": "#333333", "cursor": "pointer", "fontSize": "10px", "fontWeight": "normal", },
+                        itemDistance:10,
                         legend:{
                             enabled:true,
                         },
@@ -319,8 +347,6 @@
             min:0.50
         })
 		
-		
-		
 		//	私募q指数
 		var qSeries=[
 			{name:"私募Q指数",data:[1000, 1006.58, 1012.09,1013.55,1021.12,1025.06,1034.56,1049.03,1057.36,1066.03,1066.53,1076.5,1084.45,1084.45,1090.38,1093.68,1104.35,1109.78,1124.72,1123.03,1122.14,1118.22,1122.16,1124.27,1141.46,1139.48],fillColor:{linearGradient: [0, 0, 0, 200],stops: [[0, "#22BFFF"],[1, Highcharts.Color("#22BFFF").setOpacity(0).get('rgba')]]}}
@@ -339,7 +365,6 @@
             type:"areaspline" ,
             min:900
         })
-		
 		
 		//初始化面积图
 		function initArea(dom, resp, data) {
@@ -414,6 +439,8 @@
 				align : 'center', //图表对其方式center right
 				verticalAlign :  'bottom', //垂直对齐方式 bottom middle
 				borderWidth :  0,
+				itemStyle: data.x_itemStyle||{ "color": "#333333", "cursor": "pointer", "fontSize": "12px", "fontWeight": "bold" },
+				itemDistance:data.itemDistance||20,
 			},
 			plotOptions : {
 	            series : {

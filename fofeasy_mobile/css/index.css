@@ -118,9 +118,9 @@ body{
 .date-hr{
 	display: inline-block;
 	width: 20px;
-	border: 1px solid #484848;
+	border-bottom: 0.5px solid #484848;
 	position: relative;
-	margin-top: 30px;
+	margin-top: 29px;
 }
 
 
@@ -380,9 +380,6 @@ body{
 }
 
 
-
-
-
 /*easy*/
 
 .easy-con2 {
@@ -390,7 +387,7 @@ body{
 	padding: 1px 0px 20px 0px;
 }
 
-.easy-con2 .card-con>div {
+.easy-con2 .card-con>div{
 	display: flex;
 }
 
@@ -595,6 +592,10 @@ margin-bottom:10px ;
 	letter-spacing: 0;
 }
 
+.private-con .dateEnd span{
+	vertical-align: top;
+}
+
 .private-con .card-con>div .card .title{
 	ont-family: PingFangSC-Medium;
 	font-size: 24px;
@@ -662,6 +663,9 @@ margin-bottom:10px ;
 	border-top: 1px solid white;
 	height: 35px;
 	line-height: 10px;
+}
+.data-table .mui-table-view .mui-collapse-content {
+	border: 1px solid #D2D2D2;
 }
 
 
@@ -1219,12 +1223,12 @@ margin-bottom:10px ;
 .applyfor label{
 	font-weight: normal;
 	color: #5b5b5b;
+	font-size: 14px;
 }
 
 .apply-con1{
 	margin-top: 30px;
 }
-
 .apply-con1 .apply-title{
 	font-family: PingFangSC-Medium;
 	font-size: 18px;
@@ -1238,7 +1242,6 @@ margin-bottom:10px ;
 
 .inpDiv{
 	font-family: PingFangSC-Regular;
-	font-size: 14px;
 	color: #5B5B5B;
 	letter-spacing: 1.6px;
 	text-align: justify;
@@ -1247,6 +1250,7 @@ margin-bottom:10px ;
 
 .inpDiv p{
 	line-height: 8px;
+	font-size: 18px;
 }
 .prcTypediv {
 	margin-bottom: 20px;	
@@ -1256,11 +1260,15 @@ margin-bottom:10px ;
 .inpDiv input{
 	width: 100%;
     height: 32px;
+    /*font-size: 14px;*/
 	border: 1px solid #F0F0F0;
 	border-radius: 2px;
 	margin-bottom: 15px;
-	color: #484848;
+	color: #5B5B5B;
 	padding: 5px;
+}
+.inpDiv input:focus {
+	border: 1px solid #4899FD;
 }
 
 .apply-con1 .prcTypediv .slcTxt{

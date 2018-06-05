@@ -85,7 +85,7 @@ body a,body a:active,body a:hover,body a:link,body a:visited{
 	background: #636262;
 }
 .sy-header a{
-	width: 100%;
+	width: calc(100% - 15px);
 	color: white;
 	float: left;
     margin-left: 15px;

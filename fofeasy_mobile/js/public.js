@@ -113,8 +113,14 @@ function loadFundData(){
 	}
 	
 	
+	
+	
 	var url = location.search; //获取url中"?"符后的字串   
 	var name = geturlParams(url).name;
+	
+	if(name==null){
+		return;
+	}
 	// 头部菜单滚动
 	var mutualNum=8037;
 	var mutualOrgNum=133;

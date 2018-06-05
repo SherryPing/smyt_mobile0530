@@ -13,7 +13,7 @@
     	<style type="text/css">
     		.product_img{  			
     			height:245px;
-    			background: url('img/exponent-bg-head@2x.png') top center no-repeat;
+    			background: url('img/top-bg-exponential.png') top center no-repeat;
     			background-size: 100%;
     		}
     		
@@ -30,10 +30,10 @@
 		<header class = "load_header"></header>		
 		<div class="row exponent">
 			<!--头部背景-->
-			<div class="product_img" style="color: white;">
+			<div class="product_img bg-head" >
 				<div class="bg-content">
 					<div class="bg-title" >
-						基金评价
+						指数服务
 					</div>
 				</div>
 			</div>
@@ -260,7 +260,7 @@
 		
 		//HFMI
 		var hfmiSeries=[
-			{name:"HFMI指数",data:[0.5799, 0.5942, 0.5678,0.5667],fillColor:{linearGradient: [0, 0, 0, 200],stops: [[0, "#22BFFF"],[1, Highcharts.Color("#22BFFF").setOpacity(0).get('rgba')]]}}
+			{name:"HFMI指数",data:[0.5799, 0.5942, 0.5678,0.5667],fillColor:{linearGradient: [0, 0, 0, 100],stops: [[0, "#22BFFF"],[1, Highcharts.Color("#22BFFF").setOpacity(0).get('rgba')]]}}
 		];
 		var hfmiCato= ['2018-01', '2018-02', '2018-03','2018-04'];
 		initArea($("#hfmiChart"),{date:hfmiCato,series:hfmiSeries},{

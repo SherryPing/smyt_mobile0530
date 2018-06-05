@@ -64,6 +64,15 @@ body{
 	letter-spacing: -0.21px;
 }
 
+.bg-head .bg-title{
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 16px;
+	margin-top: 30px;
+}
+
 .s-btn {
 	width: 100px;
 	height: 25px;
@@ -1145,15 +1154,6 @@ margin-bottom:10px ;
 	margin-bottom: 40px;
 }
 
-.yunClub .bg-title{
-	font-family: PingFangSC-Regular;
-	font-size: 16px;
-	color: #FFFFFF;
-	text-align: center;
-	line-height: 16px;
-	margin-top: 40px;
-}
-
 .yunClub-1 .card {
 	display: flex;
 	height: 160px;
@@ -1213,6 +1213,10 @@ margin-bottom:10px ;
  * 申请产品试用
  * */
 
+.applyfor label{
+	font-weight: normal;
+}
+
 .apply-con1{
 	margin-top: 30px;
 }
@@ -1259,15 +1263,18 @@ margin-bottom:10px ;
 	text-align: justify;
 }
 
-.radio input[type=radio]:checked {
+/*.radio input[type=radio]:checked {
     background: #009ad6;
     border: 0;
+    border: 1px solid red;
+}
+*/
+.radio-card{
+	display: flex;
 }
 
-
 .radio-card div{
-	display: inline-block;
-	width: 45%;
+	width: 50%;
 	text-align: left;
 	padding-left: 10px;
 	font-family: PingFangSC-Regular;
@@ -1275,7 +1282,6 @@ margin-bottom:10px ;
 	color: #5B5B5B;
 	letter-spacing: 1.33px;
 }
-
 
 .radio input[type=radio] {
     opacity: 0;
@@ -1288,6 +1294,7 @@ margin-bottom:10px ;
     top: 50%;
     margin-top: -7px
 }
+
 .radio {
     font-size: 12px;
     position: relative;
@@ -1296,6 +1303,7 @@ margin-bottom:10px ;
     line-height: 32px;
     text-align: left;
 }
+
 .checkbox input[type=checkbox]+i,
 .radio input[type=radio]+i {
     position: absolute;
@@ -1307,7 +1315,6 @@ margin-bottom:10px ;
     margin-top: -8px;
     font-style: normal;
 }
-
 
 .radio input[type=radio]+i {
     -webkit-border-radius: 100%;
@@ -1321,7 +1328,6 @@ margin-bottom:10px ;
 .radio input[type=radio]:checked+i~span{
     color: #4699FF;
 }
-
 
 .radio input[type=radio]:checked+i:after {
     content: "";
@@ -1338,15 +1344,15 @@ margin-bottom:10px ;
 }
 
 .smyt-btn1{
-    border-radius: 2px;
-    width: 85%;
-    height: 32px;
-    line-height: 32px;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
     font-size: 16px;
     color: #fff;
     letter-spacing: 5px;
     background: #4899FD;
     margin-bottom: 30px;
+    line-height: 40px;
 }
 
 
@@ -1361,7 +1367,6 @@ margin-bottom:10px ;
 	margin-top: 0px;
 }
 
-
 .assess2 .card .con .con1:nth-child(2n-1){
 	border-right:1px solid #E5E5E9 ;
 }
@@ -1374,7 +1379,6 @@ margin-bottom:10px ;
 	line-height: 50px;
 }
 
-
 .assess2 .card .con .con1>div div:not(first-child){
 	font-family: PingFangSC-Regular;
 	font-size: 14px;
@@ -1382,11 +1386,9 @@ margin-bottom:10px ;
 	text-align: center;
 }
 
-
 .assess2 .card .con:last-child{
 	border-bottom: 1px solid #D8D8D8;
 }
-
 
 .assess3 li{
 	font-family: Helvetica;
@@ -1405,8 +1407,6 @@ margin-bottom:10px ;
 	line-height: 14px;
 	margin-top: 10px;
 }
-
-
 
 /*
  * 主体6
@@ -1465,8 +1465,9 @@ margin-bottom:10px ;
 	float: right;
 }
 
-.assess6 .right img{
+.assess6 .right .img{
 	padding-left:5px;
+	background:url('img/top-bg-apply.png') top center no-repeat;
 }
 
 /*

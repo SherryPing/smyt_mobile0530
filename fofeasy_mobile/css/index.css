@@ -1544,3 +1544,67 @@ margin-bottom:10px ;
 	letter-spacing: -0.29px;
 	text-align: left;
 }
+
+.ins-con1 ul{
+	padding-left: 20px;
+}
+.ins-con1 ul li {
+	position: relative;
+}
+.ins-con1 ul li img {
+	position: absolute;
+	top: 0;
+	left: -20px;
+	width: 16px;
+}
+.ins-con1 .card {
+	margin:20px 0;
+}
+.ins-con2 {
+	height: 182px;
+	background: url(../img/ins-con2-pic.png) center center no-repeat;
+	background-size: 100%;
+}
+.ins-con3 .con>div {
+	display: inline-block;	
+}
+.ins-con3 .con .left-p {
+	color: #fff;
+	background: #D61F2C;
+	display:table;
+	width: calc(100% - 176px);
+	height: 178px;
+}
+.ins-con3 .con .left-p>div {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+.ins-con3 .con .left-p .v1 {
+	position: relative;
+}
+.ins-con3 .con .left-p .v1 img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+}
+.ins-con3 .con .left-p .v1 .title {
+	margin-left: 20px;
+	font-size: 14px;
+	letter-spacing: 0.88px;
+	text-align: center;
+	line-height: 18px;	
+}
+.ins-con3 .con .left-p .v1 .detail {
+	opacity: 0.8;
+	font-size: 10px;
+	line-height: 30px;
+	height: 30px;
+	text-align: left;
+}
+.ins-con3 .con .right-p {
+	width: 176px;
+	background: url(../img/ins-con3-pic.png) center center no-repeat;
+	background-size: 176px 178px;
+}

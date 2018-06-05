@@ -1360,6 +1360,10 @@ margin-bottom:10px ;
  * 评价服务
  * */
 
+.assess ul{
+	padding-left: 20px;
+}
+
 .assess2 .card .con .con1{
 	display: inline-block;
 	height: 120px;
@@ -1390,13 +1394,21 @@ margin-bottom:10px ;
 	border-bottom: 1px solid #D8D8D8;
 }
 
-.assess3 li{
+.assess li{
 	font-family: Helvetica;
 	font-size: 10px;
 	color: #484848;
 	text-align: justify;
 	line-height: 14px;
 	margin-top: 10px;
+	position: relative;
+}
+
+.assess .card ul img{
+	position: absolute;
+    top: 0;
+    left: -20px;
+    width: 16px;
 }
 
 .assess4 li{
@@ -1432,12 +1444,9 @@ margin-bottom:10px ;
 	text-align: left;
 }
 
-.assess6 .card .con:nth-child(1){
-	flex: 2;
-}
-
 .assess6 .card .con:nth-child(2){
 	flex: 3;
+	margin-left: 10px;
 }
 
 .assess6 .card .con div:nth-child(1){
@@ -1447,8 +1456,25 @@ margin-bottom:10px ;
 	margin-bottom: 10px;
 }
 
+.assess6 .card .con:nth-child(1){
+	flex: 2;
+}
+
 .assess6 .card .con div:nth-child(2){
-	margin-bottom: 15px;
+	margin-bottom: 12px;
+}
+
+.assess6 .card .con:nth-child(1) .quarterly{
+	font-size:10px;
+	width:90px;
+	border: 1px solid white;
+	border-radius: 2px;
+	height: 25px;
+	line-height: 25px;
+	color: white;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 32px;
 }
 
 .assess6 .card .con .mui-ellipsis-2 {
@@ -1465,9 +1491,8 @@ margin-bottom:10px ;
 	float: right;
 }
 
-.assess6 .right .img{
+.assess6 .right img{
 	padding-left:5px;
-	background:url('img/top-bg-apply.png') top center no-repeat;
 }
 
 /*
@@ -1500,6 +1525,22 @@ margin-bottom:10px ;
 	margin-top: 10px;
 }
 
+.applyadd {
+	background-size: cover;
+	height: 130px;
+	padding-top: 50px;
+	
+}
+
+.applyadd div{
+	border: 1px solid white;
+	border-radius: 4px; 
+	color: white;
+	text-align: center;
+	width: 180px;
+	height: 30px;line-height: 30px;
+	margin: 0 auto;
+}
 
 /*
  研究院

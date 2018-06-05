@@ -10,6 +10,9 @@
 		<link rel="stylesheet" href="css/public.css" />
 		<link rel="stylesheet" href="css/index.css" />
 		<script src="js/highcharts.js"></script>
+		
+		<script type="text/javascript" src="js/bootstrap.min.js"> </script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     	<style type="text/css">
     		.product_img{  			
     			height:245px;
@@ -20,6 +23,11 @@
     		.exponent4 li{
     			margin-left: 20px;
 				list-style-image: url(img/assess3.png);
+			}
+			
+			.assess6 .card .con:nth-child(1) {
+				background:url('img/assess6-report@2x.png') top left no-repeat;
+				background-size: cover;
 			}
     		/*.sy-header .head {
 			    background: transparent;
@@ -70,22 +78,17 @@
 			</div>
 			
 			<!--主体5  往期报告-->
-			<!--<div class="exponent-5 leave-white">
-				<div class="">
-					
-				</div>
-				<div class="card">
-					
-				</div>
-			</div>-->
+			
 			<div class="exponent3 assess6 leave-white" >
 				<div class="mian-title " >
 					往期报告
 				</div>
 				<div class="card ">
 					<div class="con " >
-						<div class="img">
-							<img src="img/exponent-report.png"/>
+						<div class="img" >
+							<div class="quarterly" >
+								2018年11月
+							</div>
 						</div>
 					</div>
 					<div class="con">
@@ -103,8 +106,10 @@
 				
 				<div class="card ">
 					<div class="con " >
-						<div class="img">
-							<img src="img/exponent-report.png"/>
+						<div class="img" >
+							<div class="quarterly" >
+								2018年11月
+							</div>
 						</div>
 					</div>
 					<div class="con">
@@ -122,8 +127,10 @@
 				
 				<div class="card ">
 					<div class="con " >
-						<div class="img">
-							<img src="img/exponent-report.png"/>
+						<div class="img" >
+							<div class="quarterly" >
+								2018年11月
+							</div>
 						</div>
 					</div>
 					<div class="con">
@@ -138,7 +145,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="">
+				<div class="page" style="height: 80px;">
 					<nav class="pull-right" aria-label="Page navigation" style="">
 					  <ul class="pagination">
 					    <li>
@@ -157,8 +164,37 @@
 				</div>
 			</div>
 			
-			<div >
-				<img src="img/exponent-apply.png"/>
+			<div class="applyadd" style="background: url(img/exponent-apply.png) top left no-repeat;">
+				<a target="_blank">
+					<div class="" data-toggle="modal" data-target="#myModal">
+						申请加入HFMI指数
+					</div>
+				</a>
+			</div>
+			
+			
+			<!-- 模态框（Modal） -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;
+							</button>
+							<h4 class="modal-title" id="myModalLabel" style="font-size: 14px;text-align: left;">
+								HFMI指数持续招募中，请扫描下方二维码
+							</h4>
+						</div>
+						<div class="modal-body">
+							<img src="img/HFMI.jpg" width="50%"/>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+							</button>
+							
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal -->
 			</div>
 			
 			<div class="exponent4  leave-white" style="height: 450px;">
@@ -228,7 +264,7 @@
                         se.data=resp.records[i].data;
                         se.name=resp.records[i].latest.index_name;
                         se.fillColor={
-                            linearGradient: [0, 0, 0, 200],
+                            linearGradient: [0, 0, 0, 170],
                             stops: [
                                 [0, colors2[i]],
                                 [1, Highcharts.Color(colors2[i]).setOpacity(0).get('rgba')]
@@ -241,6 +277,12 @@
                             series[i].visible = false;
                             //gs.series[i].yAxis = 1;
                         }
+                        
+                        var name=n.name.substring(n.name.length-4,n.name.length);
+                    	var newname=n.name.substring(0,n.name.length-4);
+                    	if(name=="私募指数"){
+                    		n.name=newname;
+                    	}
                     })
                      initArea($("#hedgeLineChart"),{date:categories,series:series},{
                      	x_tickmarkPlacement:'between',
@@ -252,6 +294,7 @@
                             enabled:true,
                         },
                         type:"areaspline" ,
+                       
                     })
                 }
             }
@@ -303,11 +346,11 @@
 		dom.highcharts({
 			chart : {
 				zoomType : data.zoomType,
-				type : data.type||'area'
+				type : data.type||'column'
 			},
 			colors : data.color || [ '#2765B9', '#2C8CF8', '#FB88B3', '#D72F54', '#9370DB' ],
 			title : {
-				text : ' '
+				text : ''
 			},
 			xAxis : {
 				type : data.xType||"categories",

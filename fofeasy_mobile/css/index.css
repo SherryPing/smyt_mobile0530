@@ -1756,8 +1756,8 @@ margin-bottom:10px ;
 	line-height: 25px;
 	font-size: 10px;	
 	text-align: left;
-	display: table-cell;
-    vertical-align: middle;
+	/*display: table-cell;
+    vertical-align: middle;*/
 }
 .ins-con7 .card  .right-p>div:before {
 	content: '';

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>专家详情</title>
+		<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" />
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/public.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/index.css" />
+    	<style type="text/css">
+    	</style>
+	</head>
+	<body class="container-fluid ins">
+		<div class="row institution">
+			<!--主体7-->
+			<div class="leave-white ins-con7" style="margin-top: 20px;">
+				<div class="card">
+					<div class="left-p">
+						<img id="advtar" />
+						<div id="name" class="name"></div>
+					</div>
+					<div id="work" class="right-p">
+					</div>
+				</div>				
+			</div>
+			<div class="leave-white ins-con8" id="exprience">
+					
+				</div>
+		</div>		
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			//获取头部url参数
+			var geturlParams = function(url) {
+				var theRequest = new Object();
+				if(url.indexOf("?") != -1) {
+					var str = url.substr(1);
+					strs = str.split("&");
+					for(var i = 0; i < strs.length; i++) {
+						theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+					}
+				}
+				return theRequest
+			}
+//			详情数据
+			var data=[
+				{name:"巫景飞",work:["上海大学经济学院副教授","浙商资产管理研究院创始院长","上海交通大学高等金融学院企业导师"],detail:["长期从事产业分析与企业战略研究，具有二十年以上管理咨询经验，曾经为包括意大利Ferretti游艇集团、意大利Savio纺机公司、中国商用飞机有限公司、浙江国贸集团、浙江物产集团、浙江东方股份有限公司、汇鸿国际股份有限公司、舟山港集团、舟山交通投资集团、昆明交通投资集团、杭州联合商业银行、江苏高科技投资集团、舟山市国资委、上海市国资委以及中组部等机构提供过咨询或培训服务。","已在《管理世界》、《中国工业经济》、《财贸经济》、《企业管理》等并已在多个刊物上进行了发表数十篇经济理论与实务文章。先后主持或参与了包括国家重点基础研究发展计划 （973项目）、国家科技支撑计划、国家社科基金、国家发改委CDM基金、国务院法制办立法研究等多项国家级、省部级研究项目。"]},
+				{name:"倪中新",work:["金融信息研究中心主任","浙商资产管理研究院创始院长","香港中文大学统计系、统计学哲学博士学位"],detail:["主要研究领域：数理统计、金融计量经济、数量投资分析。多次指导学生参加国际、国内数学模型竞赛，并荣获国际特等奖一项，具有丰富的数学建模经验。","入选上海市“浦江人才”计划。近年来在SSCI、SCI检索的国际期刊以及国内重要学术期刊公开发表学术论文30多篇。"]},
+				{name:"李勇",work:["教育部青年长江特聘教授","香港中文大学取得统计学博士","新加坡管理大学金融学博士后"],detail:["中国人民大学汉青经济金融研究院金融学博士生导师、原金融系系主任，量化金融专业硕士项目项目主任、院长助理。","研究方向是贝叶斯金融计量经济学，资产配置，量化投资。入选教育部新世纪人才，北京市青年优秀人才。"]},
+				{name:"黄卓",work:["《经济学（季刊）》副主编","北京大学数字金融研究中心副主任","北京大学国家发展研究院副教授、博士生导师、发树学者"],detail:["黄卓老师于2001年获得斯坦福大学经济学博士学位，曾获得斯坦福大学经济系“最佳博士生候选人论文奖”、曹凤岐金融发展基金“金融青年科研优秀奖”等奖励。","2017年获得北京大学“中国工商银行经济学优秀学者奖”。黄卓老师的发表论文曾入选ESI全球经济学与商学领域前1%高被引论文。"]},
+				{name:"高健",work:["北京中金量化科技投资有限公司创始人、总经理","中国跨学科金融科技智库联合创始人","原中国国际期货有限公司资管中心副总裁兼总监"],detail:["北京大学金融学研究生，中国人民大学量化投资客座教授。原中国国际期货有限公司资管中心副总裁兼总监，投资经理。10余年大型金融机构投资经验，管理资产达到二十亿以上。","丰富的量化交易及风险计量系统开发经验，主持开发过投资组合优化管理系统、外盘衍生品交易系统、衍生品风险计量系统（SPAN）、和智能套利交易系统等软件项目。擅长跨学科金融建模及通过先进的人工智能技术在复杂的市场环境下优化投资组合，控制风险，增厚收益。"]},
+				{name:"玄耀",work:["北京中金量化首席投资官","北京对外经贸大学金融学院研究生校外导师","CCTV证券资讯频道“《A股量化策略》”唯一特邀嘉宾"],detail:["CCTV证券资讯频道量身打造的黄金档栏目，中国首档量化节目“《A股量化策略》”，运行至今共200多期，作为每期的唯一特邀嘉宾，负责每期内容的制作和讲解。","十年华尔街专业量化研究经验，曾在美国最成功的量化基金管理公司Dimensional Fund Advisors（DFA）从事交易算法开发及金融产品设计。在任职期间参与全球股票基金产品策略研发，核心交易算法开发，涉及到的产品100余只，对应规模4000亿美元。被美国机构投资者组织（Institutional Investor) 授予2010年度最佳量化投资经理奖。在玄耀负责交易算法的5年期间（2008-2013），DFA旗下基金有80%超过同类型的基准指数。"]},
+				{name:"李平",work:["北京航空航天大学经管学院金融系教授、博导，北京航空航天大学经济与商学研究院院长助理","中国科学院数学与系统科学研究院概率统计博士，中国科学院数学与系统科学研究院金融管理博士后","民建北京市委金融委员会副主任，中航重机独立董事，中国金融系统工程专委会副秘书长，中国金融计量专委会副秘书长"],detail:["先后在普林斯顿大学运筹与金融工程系、美国哥伦比亚大学工业工程与运筹系及统计系、美国南卡罗来纳大学商学院金融系、香港中文大学工业工程与运筹系、奥地利维也纳技术大学金融数学与保险系、德国洪堡大学随机研究所等机构做访问研究。曾于2015年8月至2016年8月间挂职首创集团金融管理部副总经理， 2010年12月至2011年6月间挂职北京市海淀区房管局局长助理。","先后主持了四项国家自然科学基金项目、参与了国家973项目和国家自然科学基金重点项目等；在国内外知名学术期刊如European Financial Management、Quantitative Finance、Finance Research Letters、Annals of Economics and Finance、Optimization、Theoretical Computer Science、《管理科学学报》、《系统工程理论与实践》等发表论文50余篇。协助成思危先生出版《虚拟经济概览》、《人民币国际化》、《The Chinese Stock Market》等3部专著；曾任新华社、中债登记结算公司、北京市金融局等单位的项目评审专家。"]},
+				{name:"潘慧峰",work:["况客科技研究顾问","对外经济贸易大学金融学院教授，博士生导师","量化专硕项目主任，智慧金融科技研究中心主任"],detail:["主要研究领域：实证金融、风险管理、FoF投资，主持并参与了多项国家级和省部级科研项目，在《Annals of Operation Research》、《经济研究》、《金融研究》、《统计研究》、《中国软科学》、《国际金融研究》等期刊发表论文40余篇。","2013年开始主讲《股票量化策略》，与业界进行广泛的合作，长期探索产学研一体化的人才培养模式。"]},
+				{name:"王胜华",work:[" 汇鸿汇升投资总经理","上市公司汇鸿国际集团董事会秘书及投资主管"],detail:["从业10年来主要负责上市公司的投资管理工作，具有开阔的思维视野，敏锐果断的研判能力和风险意识。","在任职董秘期间，参与完成江苏省国企改革第一单——汇鸿国际集团的整体上市重组工作。同时，领导汇升在量化投资及资产配置方面积累了丰富的经验。"]}
+			]
+			var url = location.search; //获取url中"?"符后的字串   
+			var index = geturlParams(url).index;
+			var ind=index-1;
+			
+			var src="img/ins-tmem"+index+".png";
+			$("#advtar").attr("src",src);
+			$("#name").text(data[ind].name);
+			
+			var works="";
+			var ex="<div>";
+			for(var i=0;i<data[ind].work.length;i++){
+				works += "<div>"+data[ind].work[i]+"</div>";
+				if(i==data[ind].work.length-1){
+					ex +=data[ind].work[i]+"。"
+				}else{
+					ex +=data[ind].work[i]+"、"
+				}				
+			}
+			$("#work").html(works);
+			ex+="</div>";
+						
+			for(var j=0;j<data[ind].detail.length;j++){
+				ex += "<div>"+data[ind].detail[j]+"</div>";
+			}
+			$("#exprience").html(ex)
+		})
+
+	</script>
+</html>

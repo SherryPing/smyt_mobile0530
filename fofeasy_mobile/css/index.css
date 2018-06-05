@@ -1518,7 +1518,8 @@ margin-bottom:10px ;
 	color: #3D5668;
 	letter-spacing: 1.2px;
 	text-align: center;
-	line-height: 26px;
+	line-height: 30px;
+	margin-bottom: 10px;
 }
 
 .exponent3 .mian-title{
@@ -1529,7 +1530,29 @@ margin-bottom:10px ;
 	line-height: 20px;
 }
 
+.exponent4 ul{
+	padding-left: 20px;
+}
+
+
 .exponent4 li{
+	font-family: Helvetica;
+	font-size: 10px;
+	color: #484848;
+	text-align: justify;
+	line-height: 14px;
+	margin-top: 10px;
+	position: relative;
+}
+
+.exponent4 .card ul img{
+	position: absolute;
+    top: 0;
+    left: -20px;
+    width: 16px;
+}
+
+.assess4 li{
 	font-family: Helvetica;
 	font-size: 10px;
 	color: #484848;

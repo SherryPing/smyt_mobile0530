@@ -2,7 +2,6 @@ $(function(){
    	 //	各页面导入导航栏和底部  	 	
    	$(".load_header").load("./head.html",function(){
    		$(".switch").on("click",function(){
-   			mask();
 	   		var this_a=$(this).attr("a");
 	   		if(this_a==1){
 	   			$(this).attr("a",2);
@@ -10,12 +9,13 @@ $(function(){
 	   			$(this).removeClass("glyphicon-remove").addClass("glyphicon-align-justify");
 	   		}
 	   		if(this_a==2){
+	   			mask();
 	   			$(".cover").slideDown(200);
 	   			$(this).attr("a",1);
 	   			$(this).removeClass("glyphicon-align-justify").addClass("glyphicon-remove");
 	   		}
-	   		
 	   });
+	   
 	   $(".cover .core_data").on("click",function(){
 	   		var data_hide=$(this).data("level");
 			if (data_hide==1) {
@@ -28,7 +28,6 @@ $(function(){
 				$(this).next("ul,div").slideUp(150);
 				$(this).find("span:nth-child(2)").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 			}
-			mask();
 	   })
 		
 	});
@@ -70,7 +69,7 @@ $(function(){
 	function page(perNum,pageNum){
 		var start=(pageNum-1)*perNum;
 		var end=start+perNum;
-		console.log(start,end)
+		//console.log(start,end)
 		$(".pagination-div>div").css("display","none")
 		$(".pagination-div>div").slice(start,end).css("display","flex")
 	}
@@ -181,26 +180,11 @@ function loadFundData(){
     });
 }
 
-/*window.onload=function(){
-	console.log(1)
-	mask();
-}
-*/
+//遮罩层
 function mask(){
 	var cover_height=$("body").innerHeight()-52;		//获取当前屏幕的高度
 	if(cover_height>750){
 		$(".cover").height(cover_height+"px")	//设置遮罩层的高度   	
 		var ii=$(".cover").innerHeight();
-		console.info(cover_height+"-----"+ii)
 	}	
 }
-
-/*$(document).ready(function(){
-	var cover_height=$("body").innerHeight()-52;		//获取当前屏幕的高度
-	if(cover_height>750){
-		$(".cover").height(cover_height+"px")	//设置遮罩层的高度   	
-		var ii=$(".cover").innerHeight();
-		console.info(cover_height+"：document："+ii)
-	}	
-})
-*/

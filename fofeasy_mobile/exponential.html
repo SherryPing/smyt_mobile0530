@@ -69,17 +69,17 @@
 					HFMI私募基金管理人指数
 				</div>
 				<div id="hfmiChart" class="hfmiChart" style="width: 100%;height: 150px;">
-					<p class="loading">正在加载中，请稍等……</p>
+					<p class="loading" style="line-height: 150px;">正在加载中，请稍等……</p>
 				</div>
 			</div>
 			
 			<!--主体5  往期报告-->
 			
-			<div class="exponent3 assess6 leave-white " >
+			<div class="exponent3 assess6 leave-white "  >
 				<div class="mian-title " >
 					往期报告
 				</div>
-				<div class="pagination-div">
+				<div class="pagination-div" style="height: 350px;">
 				<div class="card ">
 					<div class="con " >
 						<div class="img" >
@@ -188,7 +188,7 @@
 				</div>
 			</div>
 			
-			<div class="applyadd" style="background: url(img/exponent-apply.png) top left no-repeat;">
+			<div class="applyadd" style="background: url(img/exponent-apply@2x.png) top right no-repeat;background-size: cover;">
 				<a target="_blank">
 					<div class="" data-toggle="modal" data-target="#myModal">
 						申请加入HFMI指数
@@ -241,7 +241,7 @@
 					华泰私募Q指数收益率曲线
 				</div>
 				<div id="qLineChart" class="hedgeLineChart" style=" height: 300px;">
-					<p class="loading" style="top: 180px;">正在加载中，请稍等……</p>
+					<p class="loading" style="line-height: 200px;">正在加载中，请稍等……</p>
 				</div>
 			</div>
 		</div>
@@ -251,7 +251,6 @@
 			
 		</footer>
 	</body>
-	
 	<script >
 		
 		
@@ -311,7 +310,7 @@
                     		n.name=newname;
                     	}
                     })
-                     initArea($("#hedgeLineChart"),{date:categories,series:series},{
+                    initArea($("#hedgeLineChart"),{date:categories,series:series},{
                      	x_tickmarkPlacement:'between',
                         color:colors2,
                         reservations : 'percent2',
@@ -368,103 +367,104 @@
             min:900
         })
 		
+		
 		//初始化面积图
 		function initArea(dom, resp, data) {
-		dom.highcharts({
-			chart : {
-				zoomType : data.zoomType,
-				type : data.type||'column'
-			},
-			colors : data.color || [ '#2765B9', '#2C8CF8', '#FB88B3', '#D72F54', '#9370DB' ],
-			title : {
-				text : ''
-			},
-			xAxis : {
-				type : data.xType||"categories",
-				categories : resp.date,
-	            labels : {
-	            	rotation : data.rotation||0,
-	            },
-				tickmarkPlacement : data.x_tickmarkPlacement || 'on',
-				dateTimeLabelFormats : data.xDateTimeLabelFormats||{
-					millisecond : '%H:%M:%S.%L',
-					second : '%H:%M:%S',
-					minute : '%H:%M',
-					hour : '%H:%M',
-					day : '%Y-%m-%d',
-					week : '%Y-%m-%d',
-					month : '%Y-%m-%d',
-					year : '%Y-%m-%d'
-				}
-			},
-			yAxis : {
-				labels : {
-					formatter : function() { //根据传入进行y轴格式化区分
-						if (data.reservations == "percent"||data.reservations == "percent1") {
-							return this.value.toFixed(0) + "%";
-						} else if (data.reservations == "percent2") {
-							return fmtRatio(this.value,2);
-						} else {
-							return this.value;
-						}
-					},
+			dom.highcharts({
+				chart : {
+					zoomType : data.zoomType,
+					type : data.type||'column',
 				},
-				min : data.min || null,
-				title : " "
-			},
-			tooltip : {
-				pointFormatter : function() {
-					var value = null;
-					var text="";
-					if (data.reservations == "percent"||data.reservations == "percent2") {
-						value = fmtRatio(this.y);
-					} else {
-						value = this.y;
+				colors : data.color || [ '#2765B9', '#2C8CF8', '#FB88B3', '#D72F54', '#9370DB' ],
+				title : {
+					text : ''
+				},
+				xAxis : {
+					type : data.xType||"categories",
+					categories : resp.date,
+		            labels : {
+		            	rotation : data.rotation||0,
+		            },
+					tickmarkPlacement : data.x_tickmarkPlacement || 'on',
+					dateTimeLabelFormats : data.xDateTimeLabelFormats||{
+						millisecond : '%H:%M:%S.%L',
+						second : '%H:%M:%S',
+						minute : '%H:%M',
+						hour : '%H:%M',
+						day : '%Y-%m-%d',
+						week : '%Y-%m-%d',
+						month : '%Y-%m-%d',
+						year : '%Y-%m-%d'
 					}
-					return '<span style="color:black">' + this.series.name + '</span>: <b>' + value + '</b>'+text+ '<br/>';
 				},
-				dateTimeLabelFormats : data.tDateTimeLabelFormats||{
-					millisecond : '%H:%M:%S.%L',
-					second : '%H:%M:%S',
-					minute : '%H:%M',
-					hour : '%H:%M',
-					day : '%Y-%m-%d',
-					week : '%Y-%m-%d',
-					month : '%Y-%m-%d',
-					year : '%Y-%m-%d'
-				},
-				shared : true
-			},
-			legend : {
-				enabled : data.legend.enabled || false, //是否显示图例 false
-				layout : 'horizontal', //布局 horizontal vertical
-				align : 'center', //图表对其方式center right
-				verticalAlign :  'bottom', //垂直对齐方式 bottom middle
-				borderWidth :  0,
-				itemStyle: data.x_itemStyle||{ "color": "#333333", "cursor": "pointer", "fontSize": "12px", "fontWeight": "bold" },
-				itemDistance:data.itemDistance||20,
-			},
-			plotOptions : {
-	            series : {
-					stacking : data.stacking||null,
-					lineColor : data.lineColor,
-					lineWidth : data.lineWidth||1,
-					marker : {
-						lineWidth : data.markerLineWidth||0,
-						radius : data.markerRadius||4,
+				yAxis : {
+					labels : {
+						formatter : function() { //根据传入进行y轴格式化区分
+							if (data.reservations == "percent"||data.reservations == "percent1") {
+								return this.value.toFixed(0) + "%";
+							} else if (data.reservations == "percent2") {
+								return fmtRatio(this.value,2);
+							} else {
+								return this.value;
+							}
+						},
 					},
-	                fillColor: data.fillColor||null
+					min : data.min || null,
+					title : " "
 				},
-			},
-			credits : {
-				enabled : false //不显示highcharts链接
-			},
-	        exporting : {
-	            enabled : false //设置导出按钮不可用
-	        },
-			series : resp.series
-		});
-	}
+				tooltip : {
+					pointFormatter : function() {
+						var value = null;
+						var text="";
+						if (data.reservations == "percent"||data.reservations == "percent2") {
+							value = fmtRatio(this.y);
+						} else {
+							value = this.y;
+						}
+						return '<span style="color:black">' + this.series.name + '</span>: <b>' + value + '</b>'+text+ '<br/>';
+					},
+					dateTimeLabelFormats : data.tDateTimeLabelFormats||{
+						millisecond : '%H:%M:%S.%L',
+						second : '%H:%M:%S',
+						minute : '%H:%M',
+						hour : '%H:%M',
+						day : '%Y-%m-%d',
+						week : '%Y-%m-%d',
+						month : '%Y-%m-%d',
+						year : '%Y-%m-%d'
+					},
+					shared : true
+				},
+				legend : {
+					enabled : data.legend.enabled || false, //是否显示图例 false
+					layout : 'horizontal', //布局 horizontal vertical
+					align : 'center', //图表对其方式center right
+					verticalAlign :  'bottom', //垂直对齐方式 bottom middle
+					borderWidth :  0,
+					itemStyle: data.x_itemStyle||{ "color": "#333333", "cursor": "pointer", "fontSize": "12px", "fontWeight": "bold" },
+					itemDistance:data.itemDistance||20,
+				},
+				plotOptions : {
+		            series : {
+						stacking : data.stacking||null,
+						lineColor : data.lineColor,
+						lineWidth : data.lineWidth||1,
+						marker : {
+							lineWidth : data.markerLineWidth||0,
+							radius : data.markerRadius||4,
+						},
+		                fillColor: data.fillColor||null
+					},
+				},
+				credits : {
+					enabled : false //不显示highcharts链接
+				},
+		        exporting : {
+		            enabled : false //设置导出按钮不可用
+		        },
+				series : resp.series
+			});
+		}
 		
 		
 	</script>

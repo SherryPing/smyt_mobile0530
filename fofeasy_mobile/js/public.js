@@ -1,7 +1,11 @@
 $(function(){
    	 //	各页面导入导航栏和底部  	 	
-   	$(".load_header").load("./head.html",function(){
-   		$(".switch").on("click",function(){
+   	 var headerCnt = '<div class="sy-header"><div class="row head" ><span class="col-sm-11 col-xs-11" ><img src="img/head-logo.png" alt="私募云通" style="width: 33px;"/>私募云通</span><span class=" glyphicon glyphicon-align-justify switch "a="2" ></span></div><div class="cover" style="display: none;"><div class=""><ul><li class="core_data" ><a href="index.html">首页</a ></li></ul></div><div class="cover_div"><p class="core_data" data-level="2"><span class="col-xs-11 col-sm-11">核心数据</span><span class="glyphicon glyphicon-menu-down"></span></p><ul><li class="core_data li" ><a href="privateFundData.html?name=hedge">中国私募证券投资基金数据库</a></li><li class="core_data li" ><a href="publicFundData.html?name=mutual">中国公募基金数据库</a></li></ul></div><div class=""><p class="core_data" data-level="2"><span class="col-xs-11 col-sm-11">系统工具</span><span class="glyphicon glyphicon-menu-down" ></span></p><ul ><li class="core_data li" ><a href="fofeasy.html?name=fofeasy">FOF Easy可视化Web终端</a></li><li class="core_data li" ><a href="fofpower.html">FOF Power基金管理系统</a></li><li class="core_data li" ><a href="jcc.html">基金查询移动web端 — 基查查</a></li></ul></div><div class=""><p class="core_data" data-level="2"><span class="col-xs-11 col-sm-11">配套服务</span><span class="glyphicon glyphicon-menu-down" ></span></p><ul><li class="core_data li" ><a href="institution.html">云通致善资产管理研究院</a></li><li class="core_data li" ><a href="assess.html">评价服务</a></li><li class="core_data li" ><a href="exponential.html">指数服务</a></li><li class="core_data li" ><a href="club.html">云尚俱乐部</a></li></ul></div><div class=""><ul><li class="core_data" ><a href="aboutUs.html">关于我们</a ></li><li class="core_data" ><a href="applyFor.html" >申请产品试用</a></li></ul></div></div></div><div class="mask"></div>';
+   	 var bootCnt = '<div class="row mtop35"><div class="col-xs-12 col-sm-12" style="padding: 0;"><div class="footerBg"><img style="width: 100%;" src="img/footer_m.png" alt=""></div></div></div><div class="row"><div class="col-xs-12 col-sm-12 footerTxt" style="padding: 0;line-height:25px"><span>公司地址：上海市浦东新区浦东南路1271-1289号华融大厦901室</span></div><div class="col-xs-12 col-sm-12 footerTxt" style="padding: 0;"><span>版权所有 Copyright(©)2016-2018</span> <span>上海琻瑢信息科技有限公司</span></div></div>';
+   	 $(".load_header").html(headerCnt);
+   	 $(".load_footer").html(bootCnt);
+   	 
+   	 $(".switch").on("click",function(){
 	   		var this_a=$(this).attr("a");
 	   		if(this_a==1){
 	   			$(this).attr("a",2);
@@ -29,9 +33,6 @@ $(function(){
 				$(this).find("span:nth-child(2)").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 			}
 	   })
-		
-	});
-	$(".load_footer").load("./foot.html");
 	//	跳转申请试用页面
 	$("div[data-id='apply-btn']").click(function(){
 		window.location.href="applyFor.html";

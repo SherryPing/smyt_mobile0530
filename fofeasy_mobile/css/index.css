@@ -1236,18 +1236,15 @@ margin-bottom:10px ;
 }
 
 
-.inpDiv{
+.inpDiv p{
 	font-family: PingFangSC-Regular;
 	font-size: 14px;
 	color: #5B5B5B;
 	letter-spacing: 1.6px;
 	text-align: justify;
-	line-height: 14px;
+	line-height: 30px;
 }
 
-.inpDiv p{
-	line-height: 8px;
-}
 .prcTypediv {
 	margin-bottom: 20px;	
 }

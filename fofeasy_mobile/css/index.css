@@ -58,10 +58,10 @@ body{
 .bg-content .title {
 	font-size: 20px;
 	color: #82d7e7;
-	height: 30px;
-	line-height: 30px;
+	height: 35px;
+	line-height: 35px;
 	text-align: left;
-	letter-spacing: -0.21px;
+	letter-spacing: 0.8px;
 }
 
 .bg-head .bg-title{
@@ -87,8 +87,8 @@ body{
 }
 
 .s-btn img{
-	width:25px;
-	padding-bottom: 2px;
+	width:20px;
+	margin-top: -4px;
 }
 
 .bg-content .title-lg {

@@ -58,10 +58,10 @@ body{
 .bg-content .title {
 	font-size: 20px;
 	color: #82d7e7;
-	height: 30px;
-	line-height: 30px;
+	height: 35px;
+	line-height: 35px;
 	text-align: left;
-	letter-spacing: -0.21px;
+	letter-spacing: 0.8px;
 }
 
 .bg-head .bg-title{
@@ -77,20 +77,24 @@ body{
 .s-btn {
 	width: 100px;
 	height: 25px;
-	line-height: 25px;
+	line-height: 23px;
 	text-align: center;
 	border-radius: 4px;
 	font-size: 12px;
 	margin-top: 5px;
 	border: 1px solid #fff;
 	color: #fff;
+	letter-spacing: 0.8px;
 }
 
 .s-btn img{
-	width:25px;
-	padding-bottom: 2px;
+	width:20px;
+	margin-top: -2px;
+	/*margin-left: -4px;*/
 }
-
+.tc {
+	text-align: center;
+}
 .bg-content .title-lg {
 	font-size: 18px;
 	height: 30px;
@@ -393,6 +397,9 @@ body{
 
 .easy-con2 .card-con>div:nth-child(1) .img {
 	height: 40px;
+}
+.tl {
+	text-align: left;
 }
 
 
@@ -1416,6 +1423,9 @@ margin-bottom:10px ;
 .assess2 .card .con .con1 img {
 	width: 30px;
 }
+.assess3-card-bg img {
+	width: 100%;
+}
 
 .assess li{
 	font-family: Helvetica;
@@ -1448,10 +1458,10 @@ margin-bottom:10px ;
  * */
 
 .assess6 .card  {
-	opacity: 0.8;
+	/*opacity: 0.8;*/
 	font-family: PingFangSC-Regular;
 	font-size: 10px;
-	color: #484848;
+	color: rgba(72,72,72,0.8);
 	text-align: justify;
 	width: 100%;
 	display: flex;
@@ -1580,7 +1590,7 @@ margin-bottom:10px ;
 	
 }
 
-.applyadd div{
+.applyadd button{
 	border: 1px solid white;
 	border-radius: 4px; 
 	color: white;

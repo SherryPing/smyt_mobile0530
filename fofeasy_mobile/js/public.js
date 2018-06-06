@@ -136,6 +136,7 @@ function loadFundData(){
         type: 'get',
         contentType: "application/json;charset=utf-8",
         data: {},
+        async:true,
         success: function (resp) {
             if(resp.success){
             	var hedgeAll=resp.records.hedge;

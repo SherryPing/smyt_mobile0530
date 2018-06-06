@@ -190,15 +190,15 @@
 			
 			<div class="applyadd" style="background: url(img/exponent-apply.png) top left no-repeat;">
 				<a target="_blank">
-					<div class="" data-toggle="modal" data-target="#myModal">
+					<button class="" data-toggle="modal" data-target="#myModal">
 						申请加入HFMI指数
-					</div>
+					</button>
 				</a>
 			</div>
 			
 			
 			<!-- 模态框（Modal） -->
-			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 80%;margin: 0 auto;margin-top: 200px;">
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 80%;margin: 0 auto;margin-top: 150px;">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -253,121 +253,6 @@
 	</body>
 	
 	<script >
-		
-		
-		
-		var colors2=["#009cff","#ff5095","#a421fd","#f75701","#0000fe","#fcd204","#8dd0df","#f77bd1","#62d8ff","#f39dc2","#c7c8c2"];
-		function fmtRatio(val, index) {
-			//index默认值为2
-			var index = arguments[1] ? arguments[1] : 2;
-		
-			if(val == null || isNaN(val) || typeof(val) == "string" && val == '') {
-				return '--';
-			}
-			var ratio = (val * 100).toFixed(index);
-			return ratio + "%";
-		}
-		//格式日期
-		function formDate(val) {
-			return val?val.substring(0,7):"--";
-		}
-		
-		
-		//		 //私募分策略业绩指数情况
-	//  function performance(){
-        $.ajax({
-            url: "https://wxapi.fofeasy.com/base/fund/home/index_trend",
-		//	url: "http://192.168.11.135:8000/base/fund/home/index_trend",
-            type: 'get',
-            contentType: "application/json;charset=utf-8",
-            data: {},
-            success: function (resp) {
-                if(resp.success){
-                	 //图
-                    var categories = resp.records[0].date;
-                    var series = [];
-                    for(var i=0;i< resp.records.length;i++){
-                        var se={};
-                        se.data=resp.records[i].data;
-                        se.name=resp.records[i].latest.index_name;
-                        se.fillColor={
-                            linearGradient: [0, 0, 0, 170],
-                            stops: [
-                                [0, colors2[i]],
-                                [1, Highcharts.Color(colors2[i]).setOpacity(0).get('rgba')]
-                            ]
-                        },
-                        series.push(se);
-                    }
-                    $.each(series, function(i, n) {
-                        if (n.name != '私募FOF指数'&&n.name != '股票多头策略私募指数') {
-                            series[i].visible = false;
-                            //gs.series[i].yAxis = 1;
-                        }
-                        
-                        var name=n.name.substring(n.name.length-4,n.name.length);
-                    	var newname=n.name.substring(0,n.name.length-4);
-                    	if(name=="私募指数"){
-                    		n.name=newname;
-                    	}
-                    })
-                     initArea($("#hedgeLineChart"),{date:categories,series:series},{
-                     	x_tickmarkPlacement:'between',
-                        color:colors2,
-                        reservations : 'percent2',
-                        'lineWidth':2,
-                        rotation:'-45',
-                        markerRadius:1,
-                        x_itemStyle:{ "color": "#333333", "cursor": "pointer", "fontSize": "10px", "fontWeight": "normal", },
-                        itemDistance:10,
-                        legend:{
-                            enabled:true,
-                        },
-                        type:"areaspline" ,
-                       
-                    })
-                }
-            }
-        });
-		
-		
-		//HFMI
-		var hfmiSeries=[
-			{name:"HFMI指数",data:[0.5799, 0.5942, 0.5678,0.5667],fillColor:{linearGradient: [0, 0, 0, 100],stops: [[0, "#22BFFF"],[1, Highcharts.Color("#22BFFF").setOpacity(0).get('rgba')]]}}
-		];
-		var hfmiCato= ['2018-01', '2018-02', '2018-03','2018-04'];
-		initArea($("#hfmiChart"),{date:hfmiCato,series:hfmiSeries},{
-         	x_tickmarkPlacement:'between',
-            color:['#22BFFF'],
-            reservations : 'percent2',
-            'lineWidth':2,
-            markerRadius:1,
-            legend:{
-           
-            },
-            type:"areaspline" ,
-            min:0.50
-        })
-		
-		//	私募q指数
-		var qSeries=[
-			{name:"私募Q指数",data:[1000, 1006.58, 1012.09,1013.55,1021.12,1025.06,1034.56,1049.03,1057.36,1066.03,1066.53,1076.5,1084.45,1084.45,1090.38,1093.68,1104.35,1109.78,1124.72,1123.03,1122.14,1118.22,1122.16,1124.27,1141.46,1139.48],fillColor:{linearGradient: [0, 0, 0, 200],stops: [[0, "#22BFFF"],[1, Highcharts.Color("#22BFFF").setOpacity(0).get('rgba')]]}}
-		];
-		var qCato= ['2017-07-07', '2017-07-14', '2017-07-21','2017-07-28','2017-08-04','2017-08-11','2017-08-18','2017-08-25','2017-09-01','2017-09-08','2017-09-15','2017-09-22','2017-09-29','2017-10-06','2017-10-13','2017-10-20','2017-10-27','2017-11-03','2017-11-10','2017-11-17','2017-11-24','2017-12-01','2017-12-08','2017-12-15','2017-12-22','2017-12-29'];
-		initArea($("#qLineChart"),{date:qCato,series:qSeries},{
-         	x_tickmarkPlacement:'between',
-            color:['#22BFFF'],
-			//reservations : 'percent2',
-			rotation:'-45',
-            'lineWidth':2,
-            markerRadius:1,
-            legend:{
-           
-            },
-            type:"areaspline" ,
-            min:900
-        })
-		
 		//初始化面积图
 		function initArea(dom, resp, data) {
 		dom.highcharts({
@@ -465,6 +350,124 @@
 			series : resp.series
 		});
 	}
+		
+		
+		
+		
+		
+		var colors2=["#009cff","#ff5095","#a421fd","#f75701","#0000fe","#fcd204","#8dd0df","#f77bd1","#62d8ff","#f39dc2","#c7c8c2"];
+		function fmtRatio(val, index) {
+			//index默认值为2
+			var index = arguments[1] ? arguments[1] : 2;
+		
+			if(val == null || isNaN(val) || typeof(val) == "string" && val == '') {
+				return '--';
+			}
+			var ratio = (val * 100).toFixed(index);
+			return ratio + "%";
+		}
+		//格式日期
+		function formDate(val) {
+			return val?val.substring(0,7):"--";
+		}
+		
+		
+		//		 //私募分策略业绩指数情况
+	//  function performance(){
+		var categories,series;
+        $.ajax({
+            url: "https://wxapi.fofeasy.com/base/fund/home/index_trend",
+		//	url: "http://192.168.11.135:8000/base/fund/home/index_trend",
+            type: 'get',
+            contentType: "application/json;charset=utf-8",
+            data: {},
+            async:false,
+            success: function (resp) {
+                if(resp.success){
+                	 //图
+                     categories = resp.records[0].date;
+                     series = [];
+                    for(var i=0;i< resp.records.length;i++){
+                        var se={};
+                        se.data=resp.records[i].data;
+                        se.name=resp.records[i].latest.index_name;
+                        se.fillColor={
+                            linearGradient: [0, 0, 0, 170],
+                            stops: [
+                                [0, colors2[i]],
+                                [1, Highcharts.Color(colors2[i]).setOpacity(0).get('rgba')]
+                            ]
+                        },
+                        series.push(se);
+                    }
+                    $.each(series, function(i, n) {
+                        if (n.name != '私募FOF指数'&&n.name != '股票多头策略私募指数') {
+                            series[i].visible = false;
+                            //gs.series[i].yAxis = 1;
+                        }
+                        
+                        var name=n.name.substring(n.name.length-4,n.name.length);
+                    	var newname=n.name.substring(0,n.name.length-4);
+                    	if(name=="私募指数"){
+                    		n.name=newname;
+                    	}
+                    })
+            		initArea($("#hedgeLineChart"),{date:categories,series:series},{
+                     	x_tickmarkPlacement:'between',
+                        color:colors2,
+                        reservations : 'percent2',
+                        'lineWidth':2,
+                        rotation:'-45',
+                        markerRadius:1,
+                        x_itemStyle:{ "color": "#333333", "cursor": "pointer", "fontSize": "10px", "fontWeight": "normal", },
+                        itemDistance:10,
+                        legend:{
+                            enabled:true,
+                        },
+                        type:"areaspline" ,
+                       
+                   })
+                }
+           }
+        });
+		
+		
+		//HFMI
+		var hfmiSeries=[
+			{name:"HFMI指数",data:[0.5799, 0.5942, 0.5678,0.5667],fillColor:{linearGradient: [0, 0, 0, 100],stops: [[0, "#22BFFF"],[1, Highcharts.Color("#22BFFF").setOpacity(0).get('rgba')]]}}
+		];
+		var hfmiCato= ['2018-01', '2018-02', '2018-03','2018-04'];
+		initArea($("#hfmiChart"),{date:hfmiCato,series:hfmiSeries},{
+         	x_tickmarkPlacement:'between',
+            color:['#22BFFF'],
+            reservations : 'percent2',
+            'lineWidth':2,
+            markerRadius:1,
+            legend:{
+           
+            },
+            type:"areaspline" ,
+            min:0.50
+        })
+		
+		//	私募q指数
+		var qSeries=[
+			{name:"私募Q指数",data:[1000, 1006.58, 1012.09,1013.55,1021.12,1025.06,1034.56,1049.03,1057.36,1066.03,1066.53,1076.5,1084.45,1084.45,1090.38,1093.68,1104.35,1109.78,1124.72,1123.03,1122.14,1118.22,1122.16,1124.27,1141.46,1139.48],fillColor:{linearGradient: [0, 0, 0, 200],stops: [[0, "#22BFFF"],[1, Highcharts.Color("#22BFFF").setOpacity(0).get('rgba')]]}}
+		];
+		var qCato= ['2017-07-07', '2017-07-14', '2017-07-21','2017-07-28','2017-08-04','2017-08-11','2017-08-18','2017-08-25','2017-09-01','2017-09-08','2017-09-15','2017-09-22','2017-09-29','2017-10-06','2017-10-13','2017-10-20','2017-10-27','2017-11-03','2017-11-10','2017-11-17','2017-11-24','2017-12-01','2017-12-08','2017-12-15','2017-12-22','2017-12-29'];
+		initArea($("#qLineChart"),{date:qCato,series:qSeries},{
+         	x_tickmarkPlacement:'between',
+            color:['#22BFFF'],
+			//reservations : 'percent2',
+			rotation:'-45',
+            'lineWidth':2,
+            markerRadius:1,
+            legend:{
+           
+            },
+            type:"areaspline" ,
+            min:900
+        })
 		
 		
 	</script>

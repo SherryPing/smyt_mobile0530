@@ -14,7 +14,8 @@ body {
 	-webkit-text-size-adjust: none;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	outline: 0;
-	overflow-x: hidden
+	overflow-x: hidden;
+	background: #fff;
 }
 
 h1,h2, h3, h4, h5, h6 {

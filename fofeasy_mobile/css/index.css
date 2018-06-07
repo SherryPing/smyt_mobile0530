@@ -733,6 +733,8 @@ margin-bottom:10px ;
 	overflow-x: scroll;
 }
 .about-con2 .card .bg {
+	position: absolute;
+	left: 0;
 	height: 157.5px;
 	margin-top: 8px;
 	margin-left: -12px;
@@ -1395,7 +1397,7 @@ margin-bottom:10px ;
 .assess2 .card .con .con1{
 	display: inline-block;
 	height: 120px;
-	width: 49%;
+	width: 48%;
 	margin-top: 0px;
 }
 

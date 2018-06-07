@@ -122,26 +122,34 @@
       				  'company':personInfo.userCompany.value,
       				  'trial_product': parseInt(type)
       				},
-      				function(resp) {
-      					console.log("提交")
-      					mui.alert('您的申请已受理，稍后会有工作人员联系您！', '提交成功', '确定',
-      						callback=function(){
-      							setTimeout(function(){
-      								if (typeof(WeixinJSBridge) != 'undefined')
-      									WeixinJSBridge.call('closeWindow');
-      							},100);
-      						})
-                        if(resp.success) {
-
-                        }
-                   }
+//    				function(resp) {
+//    					console.log("提交")
+//    					mui.alert('您的申请已受理，稍后会有工作人员联系您！', '提交成功', '确定',
+//    						callback=function(){
+//    							setTimeout(function(){
+//    								if (typeof(WeixinJSBridge) != 'undefined')
+//    									WeixinJSBridge.call('closeWindow');
+//    							},100);
+//    						})
+//                      if(resp.success) {
+//
+//                      }
+//                 }
       			);
-				layer.confirm('您的申请已受理，稍后会有工作人员联系您！', {
-					btn: ['确定'] //可以无限个按钮					  
-					 },function(index){
-					 	layer.close(index);
-					 }
-				);
+      			mui.alert('您的申请已受理，稍后会有工作人员联系您！', '提交成功', '确定',
+					callback=function(){
+						window.location.href="index.html"
+//						setTimeout(function(){
+//							if (typeof(WeixinJSBridge) != 'undefined')
+//								WeixinJSBridge.call('closeWindow');
+//						},100);
+					})
+//				layer.confirm('您的申请已受理，稍后会有工作人员联系您！', {
+//					btn: ['确定'] //可以无限个按钮					  
+//					 },function(index){
+//					 	layer.close(index);
+//					 }
+//				);
       		}
       	})
     

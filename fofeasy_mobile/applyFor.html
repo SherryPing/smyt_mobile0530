@@ -23,29 +23,29 @@
     		}
     	</style>
 	</head>
-	<body class="container-fluid applyfor">
+	<body class="container-fluid applyfor" style="background: rgb(247,248,250);">
 		<header class = "load_header"></header>		
 		<div class="row">
 			<!--头部背景-->
-			<div class="product_img" >
-			</div>
+			<!--<div class="product_img" >
+			</div>-->
 			
 		</div>
 		
 		<!--主体1-->
-		<div class="maincon apply-con1">
+		<div class="apply-con1">
 			<div class="apply-title">
+				<div>
+					<img src="img/logo1.png" height="50"/>
+				</div>
 				欢迎您试用私募云通产品系列
 			</div>
 			<div id="content" class="content2">
 				<div class="inpDiv">
 					<form name="personInfo">	
-						<p>姓名:</p>
-						<p><input name="userName" type="text" /></p>
-						<p>手机号:</p>
-						<p><input name="userPhone" type="number" /></p>
-						<p>公司及部门:</p>
-						<p><input name="userCompany" type="text" /></p>
+						<p><input name="userName" type="text" placeholder="姓名:" /></p>
+						<p><input name="userPhone" type="number" placeholder="手机号:" /></p>
+						<p><input name="userCompany" type="text" placeholder="公司及部门:" /></p>
 					</form>
 				</div>
 				<div class="prcTypediv">
@@ -56,25 +56,9 @@
 						<div class="radio-card">
 							<div class="firstRadio">
 								<label class="radio">
-					                <input type="radio" value="0" name="type" checked="">
+					                <input type="radio" value="2" name="type" checked="">
 					                <i></i>
-					                <span>FOF Easy&nbsp;&nbsp;</span>
-				            	</label>
-				            </div>
-				            <div class="secondRadio">
-								<label class="radio">
-					                <input type="radio" value="1" name="type">
-					                <i></i>
-					                <span>私募基金数据库</span>
-				            	</label>
-				            </div>
-						</div>
-						<div class="radio-card">
-							<div class="firstRadio">
-								<label class="radio">
-					                <input type="radio" value="2" name="type">
-					                <i></i>
-					                <span>FOF Power</span>
+					                <span>FOF Power基金投研平台</span>
 				            	</label>
 			            	</div>
 			            	<div class="secondRadio">
@@ -84,16 +68,29 @@
 					                <span>公募基金数据库</span>
 				            	</label>
 			         	 	</div>
+			         	 	<div class="radio-card">
+				            <div class="secondRadio">
+								<label class="radio">
+					                <input type="radio" value="1" name="type">
+					                <i></i>
+					                <span>私募基金数据库</span>
+				            	</label>
+				            </div>
+						</div>
 						</div>
 					</form>
 				</div>
-				<button type="button" id="submit" class="smyt-btn1">提交</button>
+				<button type="button" id="submit" class="applyfor-Btn">提交</button>
 			</div>
 			<div class="submitDiv">
 			</div>
 		</div>
 		
-		<footer class="load_footer"> </footer>
+		<div style="position: fixed;bottom: 0;left: 0;">
+			<img src="img/bottombg.png" width="100%" />
+		</div>
+		
+		<!--<footer class="load_footer"> </footer>-->
 	</body>
 	
 	<script type="text/javascript" charset="utf-8">

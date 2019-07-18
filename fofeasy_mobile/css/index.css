@@ -1235,11 +1235,11 @@ margin-bottom:10px ;
 }
 
 .apply-con1{
-	margin-top: 30px;
+	margin-top: 10px;
 }
 .apply-con1 .apply-title{
 	font-family: PingFangSC-Medium;
-	font-size: 18px;
+	font-size: 16px;
 	color: #484848;
 	letter-spacing: 1.8px;
 	text-align: center;
@@ -1256,7 +1256,16 @@ margin-bottom:10px ;
 	line-height: 30px;
 }
 
-
+.applyfor-Btn {
+	width: 100%;
+	height: 30px;
+	background:linear-gradient(to right,#3377E9,#5A54E4);
+	line-height: 30px;
+	color: #fff;
+	border-radius: 4px;
+	text-align: center;
+	letter-spacing: 5px;
+}
 
 .inpDiv p{
 	/*line-height: 8px;*/
@@ -1264,13 +1273,14 @@ margin-bottom:10px ;
 }
 
 .prcTypediv {
-	margin-bottom: 20px;	
+	margin: 20px 0;	
 }
 
 
 .inpDiv input{
 	width: 100%;
     height: 32px;
+    font-size: 14px;
     /*font-size: 14px;*/
 	border: 1px solid #F0F0F0;
 	border-radius: 2px;
@@ -1298,11 +1308,11 @@ margin-bottom:10px ;
 }
 */
 .radio-card{
-	display: flex;
+	/*display: flex;*/
 }
 
 .radio-card div{
-	width: 50%;
+	/*width: 50%;*/
 	text-align: left;
 	font-family: PingFangSC-Regular;
 	font-size: 12px;

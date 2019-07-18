@@ -149,7 +149,7 @@ function loadFundData(){
         		mutualNum=mutualAll.fund;
         		mutualOrgNum=mutualAll.org;
         		mutualManageNum=mutualAll.person; 
-        		//console.info(JSON.stringify(resp))
+//        		console.info(JSON.stringify(resp))
             	if(name=="hedge"){      
         			$(".private-con #hedge-date").text(staticdate);
         			$(".private-con #hedge-company").text(hedgeOrgNum);
@@ -171,7 +171,7 @@ function loadFundData(){
         			}
         			for(var i=0;i<mutualAll.fund_type.length;i++){
         				if(mutualAll.fund_type[i].type_name=="其他基金")
-        				return;
+        				continue;
         				mutualDiv += "<div>"+mutualAll.fund_type[i].type_name+":"+mutualAll.fund_type[i].num+"</div>";
         			}
         			$(".easy-con3 #mutual-con").html(mutualDiv);

@@ -733,6 +733,8 @@ margin-bottom:10px ;
 	overflow-x: scroll;
 }
 .about-con2 .card .bg {
+	position: absolute;
+	left: 0;
 	height: 157.5px;
 	margin-top: 8px;
 	margin-left: -12px;

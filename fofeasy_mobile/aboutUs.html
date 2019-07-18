@@ -13,12 +13,12 @@
 		<style type="text/css">
 			.product_img{
 				height:200px;
-				background: url('img/companynew_01@3x.png') center center no-repeat;
-				background-size: 100%;
+				background: url('img/companynew_01@3x.png') top center no-repeat;
+				background-size: cover;
 				width: auto;
 			}
 			.about-con2{
-				background: url('img/companyIntroduce.png') center center no-repeat;
+				background: url('img/companyIntroduce.png') top center no-repeat;
 				background-size: cover;
 				width: auto;
 			}
@@ -41,12 +41,12 @@
 					公司大事件
 				</div>
 				<div class="card">
-					<img class="bg" src="img/about-con1-pic1.png"/>
-					<img class="icon" src="img/scroll-right.png">
+					<img id="to-right-bg" class="bg" src="img/about-con1-pic1.png"/>
+					<img id="to-right-icon" class="icon" src="img/scroll-right.png">
 				</div>
 			</div>
 			<!--第三部分，团队介绍-->
-			<div class="maincon about-con3">
+			<div class="maincon about-con3" style="background: #fff;">
 				<div class="title">
 					团队建设
 				</div>
@@ -233,7 +233,7 @@
 							</div>
 						</a>
 					</div>
-					<div style="font-size: 12px;color: rgba(72,72,72,0.8);text-align:center;"><a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzI5OTM1MDQyOQ==&hid=4&sn=878fbf488b8b6aaef743606ddbaf7e57&scene=18#wechat_redirect" style="text-decoration: underline;">关注公众号可查看更多云通动态</a></div>
+					<div style="font-size: 12px;color: rgba(72,72,72,0.8);text-align:center;"><a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzI5OTM1MDQyOQ==&hid=4&sn=878fbf488b8b6aaef743606ddbaf7e57&scene=18#wechat_redirect" style="text-decoration: underline;letter-spacing: 1px;">查看更多云通动态</a></div>
 				<!--</div>-->
 			</div>
 		</div>
@@ -241,11 +241,30 @@
 	</body>
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" charset="UTF-8">
+	$(function(){
 		setTimeout(function(){
 			var slider = mui("#slider");
 			slider.slider({
 				interval:2000
 			})
 		})
+		
+		var time=1;
+		$("#to-right-icon").click(function(){
+			if(time==1){
+				$("#to-right-icon").css("transform","rotate(180deg)")
+				$("#to-right-bg").animate({left:'-300px'},300);
+				time++;
+			}else if(time==2){
+				$("#to-right-icon").css("transform","rotate(0)")
+				$("#to-right-bg").animate({left:'0'},300);
+				time--;
+			}
+			
+		})
+	})		
+		
+		
+		
     </script>
 </html>
